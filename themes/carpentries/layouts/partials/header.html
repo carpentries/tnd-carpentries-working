@@ -1,0 +1,39 @@
+<header class="font-serif">
+  <div class="bg-primary-500 text-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex">
+        {{ range site.Menus.top }}
+          {{ $active := false }}
+          {{ $class := printf "px-8 py-4 hover:underline %s" (cond $active "bg-white text-blue-900" "default") }}
+          {{ $aria_current := "page" }}
+          {{- if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}
+            {{ $active = true }}
+          {{- end }}
+          <a href="{{ .URL }}" aria-current="{{ cond $active true "page" }}" class="{{ $class }}">{{ .Name }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-200 py-4">
+    <div class="max-w-5xl mx-auto flex items-center">
+      {{ range site.Menus.main }}
+          {{ $active := false }}
+          {{ $class := printf "p-2 %s" (cond $active "bg-white text-blue-900" "default") }}
+          {{ $aria_current := "page" }}
+          {{- if or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) }}
+            {{ $active = true }}
+          {{- end }}
+          {{ if eq .Params.style "button" }}
+            {{ $class = "block rounded-full border border-blue-900 text-blue-500 p-2" }}
+          {{ end }}
+          <div class="relative group">
+            <a href="{{ .URL }}" aria-current="{{ cond $active true "page" }}" class="{{ $class }}">{{ .Name }}</a>
+            {{ with .Children }}
+              {{ partial "submenu" . }}
+            {{ end }}
+          </div>
+        {{ end }}
+    </div>
+  </div>
+</header>

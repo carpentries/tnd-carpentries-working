@@ -1,0 +1,5 @@
+<div class="absolute hidden shadow-lg shadow-current group-hover:block bg-white border-red-500 top-[100%]">
+  {{ range . }}
+  <a href="{{ .URL }}" class="block px-2 py-4">{{ .Name }}</a>
+  {{ end }}
+</div>
