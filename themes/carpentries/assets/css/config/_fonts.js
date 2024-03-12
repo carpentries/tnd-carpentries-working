@@ -5,6 +5,7 @@ module.exports = {
   ],
   serif: ["Times New Roman"],
   sans: [
+    "Mulish",
     "Open Sans",
     "system-ui",
     "BlinkMacSystemFont",

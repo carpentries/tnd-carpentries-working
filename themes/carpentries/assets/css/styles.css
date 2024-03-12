@@ -2,12 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-size: 14px;
-}
 
-@screen md {
-  html {
-    font-size: 20px;
-  }
+.menu-has-children span {
+  @apply after:content-[''] after:bg-[url('/chevron-down-black.svg')] after:bg-no-repeat after:right-0 after:top-[6px] after:w-2 after:h-2 after:absolute;
 }

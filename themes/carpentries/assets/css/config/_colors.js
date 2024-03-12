@@ -14,7 +14,16 @@ module.exports = (theme) => ({
     800: "#0C1937",
     900: "#060D1D",
     950: "#03060D"
-
+  },
+  blue: {
+    'light': '#E6F1FF',
+    'bright': '#0044D7',
+    'mid': '#002B66',
+  },
+  gray: {
+    'light': '#F8F8F8',
+    'mid': '#585858',
+    'dark': '#383838'
   },
   secondary: {
     ...colors.slate,

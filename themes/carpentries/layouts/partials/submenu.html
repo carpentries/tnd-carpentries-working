@@ -1,5 +1,5 @@
-<div class="absolute hidden shadow-lg shadow-current group-hover:block bg-white border-red-500 top-[100%]">
+<div class="lg:absolute hidden lg:shadow-lg group-hover:block bg-white border-red-500 lg:top-[100%] whitespace-nowrap lg:px-7 lg:py-3 lg:left-[-30px]">
   {{ range . }}
-  <a href="{{ .URL }}" class="block px-2 py-4">{{ .Name }}</a>
+  <a href="{{ .URL }}" class="block px-2 py-2 hover:underline">{{ .Name }}</a>
   {{ end }}
 </div>
