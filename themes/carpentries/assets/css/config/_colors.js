@@ -20,6 +20,7 @@ module.exports = (theme) => ({
     'bright': '#0044D7',
     'mid': '#002B66',
   },
+  offwhite: '#FFF7F1',
   gray: {
     'light': '#F8F8F8',
     'mid': '#585858',
