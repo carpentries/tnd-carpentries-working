@@ -1,0 +1,55 @@
+{{/*
+{
+"instructors": "Pradeep Eranti,Christian Ayala",
+"end_date": "2023-03-24",
+"url": "https://peranti.github.io/2023-03-20-mtu-online/",
+"administrator_id": 302,
+"curriculum": "swc-reproducible-science",
+"venue": "Michigan Technological University",
+"longitude": -88.5473891,
+"slug": "2023-03-20-mtu-online",
+"tag_name": "automated-email,online,SWC",
+"helpers": "Isaac Bigcraft,Zenia Sidorov,Vinay Palakurthy",
+"host_name": "Michigan Technological University",
+"country": "US",
+"latitude": 47.1150259,
+"start_date": "2023-03-20"
+},
+*/}}
+<div class="border p-8">
+  <div class="flex -mx-2 mb-4">
+    {{ with .type }}
+      <div class="px-2 mx-2 border"> <span class="text-xs">icon for {{ .key }}</span> {{ .name }}</div>
+    {{ end }}
+    {{ with .country }}
+      <div class="px-2 mx-2 border"> <span class="text-xs">flag for {{ .key }}</span> {{ .name }}</div>
+    {{ end }}
+    {{ with .meeting }}
+      <div class="px-2 mx-2 border"> <span class="text-xs">icon for {{ .key }}</span> {{ .name }}</div>
+    {{ end }}
+  </div>
+  {{ with $venue := .host_name }}
+  <h3 class="text-xl font-bold">
+    {{ with $.url }}
+      <a class="underline" href="{{ . }}">{{ $venue }}</a>
+    {{ else }}
+      <span>{{ $venue }}</span>
+    {{ end }}
+  </h3>
+  {{ end }}
+  unkown string: Software Carpentry (Shell, Git, R for Reproducible Scientific Analysis)
+  {{ with .instructors }}
+    <div class="mb-4">
+      <strong class="font-bold">Instructors</strong>: {{ delimit . ", " }}
+    </div>
+  {{ end }}
+  {{ with .helpers }}
+    <div class="mb-4">
+      <strong class="font-bold">Helpers</strong>: {{ delimit . ", " }}
+    </div>
+  {{ end }}
+
+  {{ with .string_date }}
+    <div class="font-bold">{{ . }}</div>
+  {{ end }}
+</div>
