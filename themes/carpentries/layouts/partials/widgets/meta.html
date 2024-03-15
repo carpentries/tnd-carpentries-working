@@ -1,0 +1,5 @@
+{{ with .Params.Lastmod }}
+  <div>
+    Last edited: {{ dateFormat "2006-01-02 at 15:04:05 UTC" . }}
+  </div>
+{{ end }}

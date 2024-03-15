@@ -1,0 +1,12 @@
+<div>
+  {{ partial "widgets/toc" . }}
+  <hr class="my-8">
+  {{ with .Params.widgets }}
+    {{ partial "widgets/_" $ }}
+  {{ end }}
+  {{ partial "widgets/feedback" . }}
+  <hr class="my-8">
+  {{ partial "widgets/meta" . }}
+  <hr class="my-8">
+  {{ partial "widgets/edit-github" . }}
+</div>

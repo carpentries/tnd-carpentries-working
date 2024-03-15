@@ -1,0 +1,16 @@
+
+{{ with $.TableOfContents }}
+<style>
+  #TableOfContents li{
+    margin-bottom: .5rem;
+  }
+  #TableOfContents li a{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+</style>
+<div id="table">
+  <h3 class="font-bold text-lg mb-5">Table of Contents</h3>
+  {{ . }}
+</div>
+{{ end }}

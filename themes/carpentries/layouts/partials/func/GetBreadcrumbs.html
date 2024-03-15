@@ -1,0 +1,16 @@
+{{ $bcs := slice }}
+{{ if not $.IsHome }}
+  {{ $bcs = $bcs | append (dict
+    "URL" site.Home.RelPermalink
+    "Name" "Home"
+  ) }}
+{{ end }}
+{{ with .Parent }}
+  {{ if ne . site.Home }}
+    {{ $bcs = $bcs | append (dict
+      "URL" .RelPermalink
+      "Name" .Title
+    ) }}
+  {{ end }}
+{{ end }}
+{{ return $bcs }}

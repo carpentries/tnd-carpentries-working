@@ -1,0 +1,10 @@
+<div class="my-8 not-prose">
+  <div class="overflow-hidden rounded-xl">
+    <img class="mx-auto lazyload" src="{{ .Destination }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
+  </div>
+  {{ with .Title }}
+    <div class="text-sm mt-2">
+      {{ $.Page.RenderString . }}
+    </div>
+  {{ end }}
+</div>
