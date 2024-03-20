@@ -6,3 +6,45 @@
 .menu-has-children span {
   @apply after:content-[''] after:bg-[url('/chevron-down-black.svg')] after:bg-no-repeat after:right-0 after:top-[6px] after:w-2 after:h-2 after:absolute;
 }
+
+.navbar-toggler-hamburger {
+  margin-right: 10px;
+  position: relative;
+  height: 12px;
+  width: 16px;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+}
+  .hamburger-line {
+    position: absolute;
+    background: #383838;
+    height: 2px;
+    width: 100%;
+    opacity: 1;
+    left: 0;
+    border-radius: 4px;
+    display: block;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+    .hamburger-line:nth-child(1) {
+      top: 0px;
+      transform-origin: left center; }
+    .hamburger-line:nth-child(2) {
+      top: 5px;
+      transform-origin: left center; }
+    .hamburger-line:nth-child(3) {
+      top: 10px;
+      transform-origin: left center; }
+
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-hamburger .hamburger-line:nth-child(1) {
+        transform: rotate(45deg);
+        top: 0;
+        left: 0; }
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-hamburger .hamburger-line:nth-child(2) {
+        width: 0%;
+        opacity: 0; }
+      .navbar-toggler[aria-expanded="true"] .navbar-toggler-hamburger .hamburger-line:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 11px;
+        left: 0; }
