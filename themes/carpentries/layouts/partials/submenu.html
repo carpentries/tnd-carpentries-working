@@ -2,7 +2,7 @@
   x-show="activeDropdown === '{{ .Parent.Identifier }}'"
   x-transition.origin.top.left
   style="display: none;"
-  class="lg:absolute lg:shadow-lg bg-white border-red-500 lg:top-[100%] whitespace-nowrap lg:px-7 lg:py-3 lg:left-[-30px]">
+  class="lg:absolute lg:shadow-lg bg-gray-light lg:top-[100%] whitespace-nowrap lg:px-7 lg:py-3 lg:left-[-30px]">
   {{ range .items }}
 
   <a href="{{ .URL }}" class="block px-2 py-2 hover:underline">{{ .Name }}</a>

@@ -41,7 +41,7 @@ The Carpentries builds global capacity in essential data and computational skill
 
 Our vision is to be the leading inclusive community teaching data and coding skills.
 
-![](/assets/about-us.png)
+![](/about-us.png)
 
 Image: \[image description\]
 

@@ -15,7 +15,7 @@
     </div>
   </div>
 
-  <div class="py-4 bg-gray-light" x-data="{ mobileOpen: false, activeDropdown: null }">
+  <div class="py-4 bg-gray-light" x-data="{ mobileOpen: false, activeDropdown: null }" @click.outside="activeDropdown = null">
     <div class="container relative flex px-5 mx-auto">
       <div class="w-40"><img width="156" height="33" class="max-w-[117px] md:max-w-none" src="/carpentries-logo.svg" alt="The Carpentries"></div>
       <div class="flex justify-end flex-1 lg:hidden">
@@ -42,7 +42,10 @@
             {{ if eq .Params.style "button" }}
               {{ $class = "inline-block py-2 px-5 text-blue-500 border border-blue-900 rounded-full [&>span]:pr-0" }}
             {{ end }}
-            <div class="relative group" x-on:keydown.escape.prevent.stop="activeDropdown = null">
+            <div
+              class="relative group"
+              x-on:keydown.escape.prevent.stop="activeDropdown = null"
+            >
               {{ if .Children }}
                 {{ $identifier := .Identifier }}
                 <button
