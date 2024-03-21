@@ -1,21 +1,18 @@
 {{ define "main" }}
   <div class="container mx-auto">
     {{ partial "breadcrumbs" . }}
-    <h1 class="font-bold text-5xl">{{ .Title }}</h1>
-    {{ with partial "func/GetUpcomingWorkshops" "GetUpcomingWorkshops" }}
-      {{ range . }}
-        {{ partial "workshop/card" . }}
-      {{ end }}
-    {{ end }}
+    <h1 class="text-5xl font-bold">{{ .Title }}</h1>
     {{ partial "subnav" . }}
 
-    <div class="relative grid md:grid-cols-12 gap-8">
-      <div class="col-span-8 pb-16">
-        <div class="prose">
-          {{ .Content }}
-        </div>
+    <div class="relative grid gap-8 md:grid-cols-12">
+      <div class="col-span-8 pb-16 pro">
+          {{ with partial "func/GetUpcomingWorkshops" "GetUpcomingWorkshops" }}
+          {{ range . }}
+            {{ partial "workshop/card" . }}
+          {{ end }}
+        {{ end }}
       </div>
-      <div class="col-span-4 relative ">
+      <div class="relative col-span-4 ">
         <div class="sticky top-10">
           {{ .Render "sidebar" }}
         </div>
