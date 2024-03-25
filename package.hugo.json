@@ -1,4 +1,22 @@
 {
+  "comments": {
+    "dependencies": {},
+    "devDependencies": {
+      "@tailwindcss/typography": "carpentries",
+      "alpinejs": "carpentries",
+      "postcss": "carpentries",
+      "postcss-cli": "carpentries",
+      "tailwindcss": "carpentries"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.0",
+    "alpinejs": "^3.13.7",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.0"
+  },
   "name": "carpentries.org",
   "version": "0.1.0"
 }
