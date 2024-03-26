@@ -19,6 +19,7 @@ module.exports = (theme) => ({
     'light': '#E6F1FF',
     'bright': '#0044D7',
     'mid': '#002B66',
+    'hover': '#0a58ca'
   },
   offwhite: '#FFF7F1',
   gray: {

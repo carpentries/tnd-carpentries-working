@@ -40,17 +40,17 @@ meeting:
     {{ end }}
   </div>
   {{ with $venue := .venue }}
-  <h3 class="text-xl font-bold">
+  <h3 class="text-[1.625rem] leading-[2.125rem] font-bold">
     {{ with $.url }}
-      <a class="underline" href="{{ . }}">{{ $venue }}</a>
+      <a class="underline hover:text-blue-hover" href="{{ . }}">{{ $venue }}</a>
     {{ else }}
-      <span>{{ $venue }}</span>
+      <span class="">{{ $venue }}</span>
     {{ end }}
   </h3>
   {{ end }}
   {{ with .curriculum }}
     {{ with .name }}
-      {{ . }}
+      <span class="text-lg font-semibold text-gray-mid">{{ . }}</span>
     {{ end }}
   {{ end }}
   {{ with .instructors }}
@@ -65,6 +65,6 @@ meeting:
   {{ end }}
 
   {{ with .string_date }}
-    <div class="font-bold">{{ . }}</div>
+    <div class="text-sm font-semibold text-gray-mid">{{ . }}</div>
   {{ end }}
 </div>
