@@ -2,3 +2,10 @@ tableOfContents:
   endLevel: 2
   ordered: false
   #startLevel: 2
+goldmark:
+  renderer:
+    unsafe: true
+  parser:
+    attribute:
+      block: true
+      title: true

@@ -58,3 +58,36 @@
 #TableOfContents li.active a:before {
   @apply content-[''] pl-5 bg-[url('/arrow-right-black.svg')] bg-no-repeat;
 }
+.table-striped table th {
+  text-align: center;
+}
+.table-striped table tr:nth-child(even) {
+  background-color: #f2f2f2; /* or any other shade of gray you prefer */
+}
+
+p.button a{
+  @apply bg-blue-bright rounded-full text-white px-4 py-2 inline-flex items-center no-underline
+}
+p.button a:after{
+  @apply block ml-2 font-bold;
+  width: 16px;
+  height: 21px;
+  content: url('/icons/arrow-right-white.svg')
+}
+
+ul.badges{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  @apply -mx-2
+}
+
+ul.badges li{
+  @apply bg-offwhite mx-2 px-2 py-1 text-xs uppercase inline-flex items-center;
+}
+ul.badges li:before{
+  content: url(/icons/check.svg);
+  display: inline-block;
+  margin-right: .5rem;
+  width: 10px;
+}

@@ -1017,6 +1017,9 @@ video {
 .mb-8 {
   margin-bottom: 2rem;
 }
+.ml-2 {
+  margin-left: 0.5rem;
+}
 .ml-8 {
   margin-left: 2rem;
 }
@@ -1055,6 +1058,9 @@ video {
 }
 .w-40 {
   width: 10rem;
+}
+.w-\[1rem\] {
+  width: 1rem;
 }
 .w-full {
   width: 100%;
@@ -1133,6 +1139,10 @@ video {
 .border-t-offwhite {
   --tw-border-opacity: 1;
   border-top-color: rgb(255 247 241 / var(--tw-border-opacity));
+}
+.bg-blue-bright {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 68 215 / var(--tw-bg-opacity));
 }
 .bg-blue-mid {
   --tw-bg-opacity: 1;
@@ -1347,56 +1357,106 @@ video {
   --tw-content: '';
   content: var(--tw-content);
 }
+.table-striped table th {
+  text-align: center;
+}
+.table-striped table tr:nth-child(even) {
+  background-color: #f2f2f2; /* or any other shade of gray you prefer */
+}
 
+p.button a {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 68 215 / var(--tw-bg-opacity));
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  text-decoration-line: none;
+}
+p.button a:after {
+  margin-left: 0.5rem;
+  display: block;
+  font-weight: 700;
+  width: 16px;
+  height: 21px;
+  content: url('/icons/arrow-right-white.svg');
+}
+
+ul.badges{
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-left: -0.5rem;
+  margin-right: -0.5rem}
+
+ul.badges li {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 247 241 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+}
+ul.badges li:before{
+  content: url(/icons/check.svg);
+  display: inline-block;
+  margin-right: .5rem;
+  width: 10px;
+}
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
 }
-
 .after\:right-\[-14px\]::after {
   content: var(--tw-content);
   right: -14px;
 }
-
 .after\:top-\[8px\]::after {
   content: var(--tw-content);
   top: 8px;
 }
-
 .after\:h-2::after {
   content: var(--tw-content);
   height: 0.5rem;
 }
-
 .after\:w-2::after {
   content: var(--tw-content);
   width: 0.5rem;
 }
-
 .after\:bg-\[url\(\'\/chevron-down-white\.svg\'\)\]::after {
   content: var(--tw-content);
   background-image: url('/chevron-down-white.svg');
 }
-
 .after\:bg-no-repeat::after {
   content: var(--tw-content);
   background-repeat: no-repeat;
 }
-
 .after\:content-\[\'\'\]::after {
   --tw-content: '';
   content: var(--tw-content);
 }
-
 .hover\:text-blue-hover:hover {
   --tw-text-opacity: 1;
   color: rgb(10 88 202 / var(--tw-text-opacity));
 }
-
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
-
+.prose-th\:font-normal :is(:where(th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  font-weight: 400;
+}
 @media (min-width: 768px) {
 
   .md\:pointer-events-none {
@@ -1500,7 +1560,6 @@ video {
     color: rgb(0 43 102 / var(--tw-text-opacity));
   }
 }
-
 @media (min-width: 1024px) {
 
   .lg\:absolute {
@@ -1595,48 +1654,37 @@ video {
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
 }
-
 .\[\&\>a\>img\]\:relative>a>img {
   position: relative;
 }
-
 .hover\:\[\&\>a\>img\]\:bottom-\[3px\]>a>img:hover {
   bottom: 3px;
 }
-
 .\[\&\>li\>a\:after\]\:absolute>li>a:after {
   position: absolute;
 }
-
 .\[\&\>li\>a\:after\]\:right-\[-14px\]>li>a:after {
   right: -14px;
 }
-
 .\[\&\>li\>a\:after\]\:top-\[5px\]>li>a:after {
   top: 5px;
 }
-
 .\[\&\>li\>a\:after\]\:h-\[9px\]>li>a:after {
   height: 9px;
 }
-
 .\[\&\>li\>a\:after\]\:w-\[9px\]>li>a:after {
   width: 9px;
 }
-
 .\[\&\>li\>a\:after\]\:bg-\[url\(\'\/arrow-right-white\.svg\'\)\]>li>a:after {
   background-image: url('/arrow-right-white.svg');
 }
-
 .\[\&\>li\>a\:after\]\:bg-no-repeat>li>a:after {
   background-repeat: no-repeat;
 }
-
 .\[\&\>li\>a\:after\]\:content-\[\'\'\]>li>a:after {
   --tw-content: '';
   content: var(--tw-content);
 }
-
 @media (min-width: 768px) {
 
   .md\:\[\&\>li\>a\:after\]\:content-none>li>a:after {
@@ -1644,15 +1692,12 @@ video {
     content: var(--tw-content);
   }
 }
-
 .hover\:\[\&\>li\>a\]\:underline>li>a:hover {
   text-decoration-line: underline;
 }
-
 .\[\&\>li\]\:mb-2>li {
   margin-bottom: 0.5rem;
 }
-
 .\[\&\>span\]\:pr-0>span {
   padding-right: 0px;
 }

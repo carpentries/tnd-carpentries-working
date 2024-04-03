@@ -5,4 +5,7 @@
 {{ if hugo.IsProduction }}
   {{ $styles = $styles | minify | fingerprint | resources.PostProcess }}
 {{ end }}
+{{ with resources.Get "/icons/arrow-right-white.svg" }}
+  {{ .Publish }}
+{{ end }}
 <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />

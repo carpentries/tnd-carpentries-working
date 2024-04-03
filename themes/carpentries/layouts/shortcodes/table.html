@@ -1,0 +1,9 @@
+{{ $icon := resources.Get "/icons/check.svg" }}
+{{ $inner := .Inner }}
+{{ if eq (.Get 0) "features"}}
+  {{ $inner = replace $inner "Has Feature" (printf `<img class="not-prose mx-auto" alt="Has Feature" src="%s" />` $icon.RelPermalink | safeHTML )}}
+{{ end }}
+
+<div class="table-striped prose-th:font-normal">
+  {{ $.Page.RenderString $inner }}
+</div>
