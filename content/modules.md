@@ -51,3 +51,42 @@ Social media promotion via **@thecarpentries** (nearly 10,000 followers)
 
 - Empowerment Sponsor: up to 4 posts per year
 - Champion: up to 2 posts per year
+
+
+
+{{< section title="Act Openly" image="/images/act_openly.png" >}}
+We believe that transparency, honesty, and fairness are keys to fostering trust within an open community.
+{{< /section>}}
+
+{{< section title="Empower One Another" image="/images/empower_one_another.png" >}}
+We help people build knowledge by creating a conducive environment for the exchange of skills, perspectives and experiences that empower people and enable them to reach their potential.
+{{< /section>}}
+
+## Programs & Offerings
+
+{{< grid cols=2 gap=4 >}}
+  {{< card title="Curriculum - Lessons" >}}
+    A 16-hour, hands-on training that covers the basics of educational psychology and evidence-based teaching practices.
+
+    [Go to Lessons](/instructor-training)
+    {.button}
+  {{< /card >}}
+  {{< card title="Instructor Training" >}}
+    A 16-hour, hands-on training that covers the basics of educational psychology and evidence-based teaching practices.
+
+    [Go to Instructor Training](/instructor-training)
+    {.button}
+  {{< /card >}}
+  {{< card title="Trainer Training" >}}
+    A 10-week program, where Trainers learn to teach Instructor Training, while continuing to develop their own teaching skill.
+
+    [Go to Trainer Training](/instructor-training)
+    {.button}
+  {{< /card >}}
+    {{< card title="Workshops" >}}
+    Inclusive and hands-on workshops, empowering students to learn new skills and build confidence in using them in their work.
+
+    [Go to Workshops](/instructor-training)
+    {.button}
+  {{< /card >}}
+{{< /grid >}}
