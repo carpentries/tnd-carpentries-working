@@ -2,7 +2,7 @@
 title: Module
 ---
 
-### Introduction
+## Copy with a button
 
 The Carpentries Sponsorship Program aims to help The Carpentries partner with like-minded organisations who want to contribute financially to help The Carpentries achieve our mission and vision.
 
@@ -11,6 +11,7 @@ With support from sponsors, The Carpentries will continue our efforts to make co
 [Apply to become a sponsor](/apply)
 {.button}
 
+## Tables
 
 {{< table features >}}
 |    | **Empowerment** <br> $150,000 <br>Limit: 2                    | **Champion** <br> $50,000 <br> Limit: 4 | **Supporter** <br> $25,000 | **Contributer** <br> $10,000 | **Advocate** <br> $5,000 |
@@ -28,7 +29,7 @@ With support from sponsors, The Carpentries will continue our efforts to make co
 | Digital supporter badge                            | Has Feature  |              |              |              |              |
 {{< /table >}}
 
-### Benefit details
+## Copy with badges
 
 #### Digital supporter badge
 
@@ -41,7 +42,7 @@ With support from sponsors, The Carpentries will continue our efforts to make co
 
 The Carpentries provides a digital icon that can be displayed on sponsor’s website and social media accounts as a way to show support for The Carpentries community.
 
-#### Social media visibility
+#### Copies with badges
 
 - Empowerment
 - Champion
@@ -52,7 +53,7 @@ Social media promotion via **@thecarpentries** (nearly 10,000 followers)
 - Empowerment Sponsor: up to 4 posts per year
 - Champion: up to 2 posts per year
 
-
+## Text and Icons
 
 {{< section title="Act Openly" image="/images/act_openly.png" >}}
 We believe that transparency, honesty, and fairness are keys to fostering trust within an open community.
@@ -62,7 +63,7 @@ We believe that transparency, honesty, and fairness are keys to fostering trust 
 We help people build knowledge by creating a conducive environment for the exchange of skills, perspectives and experiences that empower people and enable them to reach their potential.
 {{< /section>}}
 
-## Programs & Offerings
+## Cards
 
 {{< grid cols=2 gap=4 >}}
   {{< card title="Curriculum - Lessons" >}}
@@ -89,4 +90,23 @@ We help people build knowledge by creating a conducive environment for the excha
     [Go to Workshops](/instructor-training)
     {.button}
   {{< /card >}}
+{{< /grid >}}
+
+## Blobs
+
+At The Carpentries we are “Always Learning”. We embody the growth mindset we teach using data and community feedback to measure our impact and foster continuous improvement.
+
+{{< grid cols=4 gap=4 >}}
+  {{< stat >}}
+    More than **3,000** volunteers
+  {{< /stat >}}
+  {{< stat >}}
+    About **8,000** learners
+  {{< /stat >}}
+  {{< stat >}}
+    More than **150** countries
+  {{< /stat >}}
+  {{< stat >}}
+   And a **4th** stat
+  {{< /stat >}}
 {{< /grid >}}

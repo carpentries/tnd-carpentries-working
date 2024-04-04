@@ -8,4 +8,9 @@
 {{ with resources.Get "/icons/arrow-right-white.svg" }}
   {{ .Publish }}
 {{ end }}
+{{ with resources.Match "/images/blob-*" }}
+  {{ range . }}
+    {{ .Publish }}
+  {{ end }}
+{{ end }}
 <link href="{{ $styles.RelPermalink }}" rel="stylesheet" />
