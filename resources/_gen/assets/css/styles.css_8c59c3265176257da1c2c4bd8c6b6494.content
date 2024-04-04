@@ -965,6 +965,9 @@ video {
 .col-span-12 {
   grid-column: span 12 / span 12;
 }
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
 .col-span-4 {
   grid-column: span 4 / span 4;
 }
@@ -986,6 +989,10 @@ video {
 .my-12 {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+.my-16 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
 }
 .my-4 {
   margin-top: 1rem;
@@ -1016,9 +1023,6 @@ video {
 }
 .mb-8 {
   margin-bottom: 2rem;
-}
-.ml-2 {
-  margin-left: 0.5rem;
 }
 .ml-8 {
   margin-left: 2rem;
@@ -1059,9 +1063,6 @@ video {
 .w-40 {
   width: 10rem;
 }
-.w-\[1rem\] {
-  width: 1rem;
-}
 .w-full {
   width: 100%;
 }
@@ -1077,11 +1078,20 @@ video {
 .flex-1 {
   flex: 1 1 0%;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .list-disc {
   list-style-type: disc;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .flex-col {
   flex-direction: column;
@@ -1094,6 +1104,9 @@ video {
 }
 .justify-end {
   justify-content: flex-end;
+}
+.gap-10 {
+  gap: 2.5rem;
 }
 .gap-5 {
   gap: 1.25rem;
@@ -1140,10 +1153,6 @@ video {
   --tw-border-opacity: 1;
   border-top-color: rgb(255 247 241 / var(--tw-border-opacity));
 }
-.bg-blue-bright {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 68 215 / var(--tw-bg-opacity));
-}
 .bg-blue-mid {
   --tw-bg-opacity: 1;
   background-color: rgb(0 43 102 / var(--tw-bg-opacity));
@@ -1156,9 +1165,16 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(248 248 248 / var(--tw-bg-opacity));
 }
+.bg-primary-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(200 213 243 / var(--tw-bg-opacity));
+}
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.p-4 {
+  padding: 1rem;
 }
 .p-8 {
   padding: 2rem;
@@ -1222,6 +1238,10 @@ video {
 }
 .font-sans {
   font-family: Mulish, Open Sans, system-ui, BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 .text-5xl {
   font-size: 3rem;
@@ -1357,10 +1377,12 @@ video {
   --tw-content: '';
   content: var(--tw-content);
 }
-.table-striped table th {
-  text-align: center;
+
+.table-striped th, .table-striped td{
+  padding-left: .5em;
+  padding-right: .5em;
 }
-.table-striped table tr:nth-child(even) {
+.table-striped tr:nth-child(even) {
   background-color: #f2f2f2; /* or any other shade of gray you prefer */
 }
 
@@ -1415,6 +1437,30 @@ ul.badges li:before{
   margin-right: .5rem;
   width: 10px;
 }
+
+.stat{
+  display: flex;
+  text-transform: uppercase;
+  text-align: center;
+  aspect-ratio: 1/1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url('/images/blob-1.svg')
+}
+.stat:nth-child(4n+2){
+  background-image: url('/images/blob-2.svg')
+}
+.stat:nth-child(4n+3){
+  background-image: url('/images/blob-3.svg')
+}
+.stat strong{
+  display: block;
+  line-height: 1.1;
+  font-size: 2em;
+}
 .after\:absolute::after {
   content: var(--tw-content);
   position: absolute;
@@ -1454,6 +1500,9 @@ ul.badges li:before{
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
+.prose-th\:text-center :is(:where(th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
+  text-align: center;
+}
 .prose-th\:font-normal :is(:where(th):not(:where([class~="not-prose"],[class~="not-prose"] *))) {
   font-weight: 400;
 }
@@ -1463,8 +1512,20 @@ ul.badges li:before{
     pointer-events: none;
   }
 
+  .md\:order-1 {
+    order: 1;
+  }
+
+  .md\:order-2 {
+    order: 2;
+  }
+
   .md\:col-span-3 {
     grid-column: span 3 / span 3;
+  }
+
+  .md\:col-span-4 {
+    grid-column: span 4 / span 4;
   }
 
   .md\:col-span-9 {
@@ -1501,6 +1562,10 @@ ul.badges li:before{
 
   .md\:grid-cols-5 {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-6 {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 
   .md\:flex-row {

@@ -58,9 +58,7 @@
 #TableOfContents li.active a:before {
   @apply content-[''] pl-5 bg-[url('/arrow-right-black.svg')] bg-no-repeat;
 }
-.table-striped th {
-  text-align: center;
-}
+
 .table-striped th, .table-striped td{
   padding-left: .5em;
   padding-right: .5em;
