@@ -3,9 +3,9 @@
 {{ $features := false }}
 {{ if eq (.Get 0) "features"}}
   {{ $features = true }}
-  {{ $inner = replace $inner "Has Feature" (printf `<img class="not-prose mx-auto" alt="Has Feature" src="%s" />` $icon.RelPermalink | safeHTML )}}
+  {{ $inner = replace $inner "Has Feature" (printf `<img class="mx-auto not-prose" alt="Has Feature" src="%s" />` $icon.RelPermalink | safeHTML )}}
 {{ end }}
 
-<div class="table-striped {{ if $features }}prose-th:font-normal prose-th:text-center{{ end }}">
+<div class="table-striped overflow-x-scroll {{ if $features }}prose-th:font-normal prose-th:text-center{{ end }}">
   {{ $.Page.RenderString $inner }}
 </div>

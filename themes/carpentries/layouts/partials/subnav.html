@@ -1,8 +1,8 @@
 {{ with .Params.nav }}
-  <ul class="flex pb-3 my-8 text-sm font-extrabold border-b">
+  <ul class="flex flex-wrap pb-3 my-8 text-sm font-extrabold border-b">
   {{ range . }}
   {{ $active := eq .url $.RelPermalink }}
-    <li><a href="{{ .url }}" class="pr-10 pyr-2 font-bold hover:underline {{ cond $active "underline" ""}}">{{ .name }}</a></li>
+    <li class="mb-2"><a href="{{ .url }}" class="pr-10 pyr-2 font-bold hover:underline {{ cond $active "underline" ""}}">{{ .name }}</a></li>
   {{ end }}
   </ul>
 {{ end }}
