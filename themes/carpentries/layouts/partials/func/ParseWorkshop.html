@@ -32,12 +32,14 @@
 */}}
 
 {{ $s := newScratch }}
-{{ $s.Set "data" . }}
+{{ $s.Set "data" dict }}
 
 {{ with .host_name }}
   {{ $s.SetInMap "data" "venue" . }}
 {{ end }}
-
+{{ with .url }}
+  {{ $s.SetInMap "data" "url" . }}
+{{ end }}
 {{/* We build a list of names for instructors and helpers */}}
 {{ with .instructors }}
   {{ $s.SetInMap "data" "instructors" (split . ",") }}
