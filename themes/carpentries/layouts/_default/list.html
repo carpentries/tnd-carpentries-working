@@ -1,8 +1,20 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <div class="container px-5 mx-auto">
+    {{ partial "breadcrumbs" . }}
+    <h1 class="text-5xl font-bold mb-8">{{ .Title }}</h1>
+    <div class="relative grid gap-8 md:grid-cols-12">
+      <div class="col-span-8 pb-16 pro">
+      {{ range .Pages }}
+        {{ .Render "card" }}
+      {{ end }}
+      </div>
+      <div class="relative col-span-4">
+        <div class="sticky top-10">
+          {{ .Render "sidebar" }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
 {{ end }}

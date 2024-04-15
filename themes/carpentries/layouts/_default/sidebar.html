@@ -1,6 +1,9 @@
 <div>
-  {{ partial "widgets/toc" . }}
+  {{ with .Content }}
+  {{ partial "widgets/toc" $ }}
   <hr class="my-8">
+  {{ end }}
+
   {{ with .Params.widgets }}
     {{ partial "widgets/_" $ }}
   {{ end }}
