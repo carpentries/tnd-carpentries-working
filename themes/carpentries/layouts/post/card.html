@@ -1,8 +1,8 @@
 <div class="p-8 mb-5 border">
-  <div class="flex mb-4 -mx-2">
+  <div class="flex mb-4">
     {{ with .Params.authors }}
       {{ range . }}
-      <div class="flex items-center mr-4 uppercase"><span>{{ . }}</span></div>
+      <div class="flex items-center mr-4 uppercase text-[0.625rem]"><span>{{ . }}</span></div>
       {{ end }}
     {{ end }}
   </div>
@@ -18,7 +18,7 @@
     {{ end }}
     {{ with .GetTerms "tags" }}
       {{ range . }}
-        <a class="bg-gray-mid px-2 py-1 mx-2 text-white rounded-full" href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <a class="px-2 py-1 mx-2 text-xs text-white rounded-full bg-gray-mid" href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
     {{ end }}
   </div>
