@@ -135,6 +135,7 @@
       {{ $country = dict
         "key" (lower $code)
         "name" .country_name
+        "image" (lower $code)
       }}
     {{ end }}
   {{ end }}
