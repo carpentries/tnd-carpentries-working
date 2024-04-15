@@ -75,24 +75,28 @@
     {{ $s.SetInMap "data" "type" (dict
       "key" "software"
       "name" "Software Carpentry"
+      "image" "/software.svg"
     ) }}
   {{/* Type is Data if... */}}
   {{ else if in $tags "dc" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "data"
       "name" "Data Carpentry"
+      "image" "/data.svg"
     ) }}
   {{/* Type is Library if... */}}
   {{ else if in $tags "lc" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "library"
       "name" "Library Carpentry"
+      "image" "/library.svg"
     ) }}
   {{/* Type is The Carpentries if... */}}
   {{ else if in $tags "Circuits" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "carpentries"
       "name" "The Carpentries"
+      "image" "/carpentries.svg"
     ) }}
   {{ else }}
   {{/* Else, Type is Unknown */}}
@@ -109,12 +113,14 @@
     {{ $s.SetInMap "data" "meeting" (dict
       "key" "in-person"
       "name" "In Person"
+      "image" "/In-Person.svg"
     ) }}
   {{/* Else, Meeting is Online */}}
   {{ else if in $tags "online" }}
     {{ $s.SetInMap "data" "meeting" (dict
       "key" "online"
       "name" "Online"
+      "image" "/Online.svg"
     ) }}
   {{ end }}
 {{ end }}

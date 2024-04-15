@@ -30,36 +30,36 @@ meeting:
 <div class="p-8 mb-5 border">
   <div class="flex mb-4 -mx-2">
     {{ with .type }}
-      <div class="px-2 mx-2 border"> <span class="text-xs">icon for {{ .key }}</span> {{ .name }}</div>
+    <div class="flex items-center mr-2"> <img class="mr-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
     {{ with .country }}
-      <div class="px-2 mx-2 border"> <span class="text-xs">flag for {{ .key }}</span> {{ .name }}</div>
+      <div class="mr-2"> [{{ .key }}] <span class="text-[0.625rem] uppercase"></span>{{ .name }}</span></div>
     {{ end }}
     {{ with .meeting }}
-      <div class="px-2 mx-2 border"> <span class="text-xs">icon for {{ .key }}</span> {{ .name }}</div>
+      <div class="flex items-center mr-2"> <img class="mr-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
   </div>
   {{ with $venue := .venue }}
-  <h3 class="text-[1.625rem] leading-[2.125rem] font-bold">
+  <h3 class="text-base md:text-[1.75rem] leading-[2.125rem] font-semibold">
     {{ with $.url }}
-      <a class="underline hover:text-blue-hover" href="{{ . }}">{{ $venue }}</a>
+      <a class="underline hover:text-blue-hover text-gray-dark" href="{{ . }}">{{ $venue }}</a>
     {{ else }}
-      <span class="">{{ $venue }}</span>
+      <span class="text-gray-dark">{{ $venue }}</span>
     {{ end }}
   </h3>
   {{ end }}
   {{ with .curriculum }}
     {{ with .name }}
-      <span class="text-lg font-semibold text-gray-mid">{{ . }}</span>
+      <div class="mb-5 text-lg font-semibold text-gray-mid">{{ . }}</div>
     {{ end }}
   {{ end }}
   {{ with .instructors }}
-    <div class="mb-4">
+    <div class="mb-2 text-xs">
       <strong class="font-bold">Instructors</strong>: {{ delimit . ", " }}
     </div>
   {{ end }}
   {{ with .helpers }}
-    <div class="mb-4">
+    <div class="mb-4 text-xs">
       <strong class="font-bold">Helpers</strong>: {{ delimit . ", " }}
     </div>
   {{ end }}
