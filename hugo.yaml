@@ -30,3 +30,6 @@ build:
       target: js
     - source: assets/.*\.(.*)$
       target: $1
+caches:
+  getresource:
+    maxAge: -1

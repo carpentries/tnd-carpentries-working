@@ -39,13 +39,15 @@
 {{ end }}
 
 {{/* We build a list of names for instructors and helpers */}}
-{{ $s.SetInMap "data" "instructors" slice }}
 {{ with .instructors }}
   {{ $s.SetInMap "data" "instructors" (split . ",") }}
+{{ else }}
+  {{ $s.SetInMap "data" "instructors" slice }}
 {{ end }}
-{{ $s.SetInMap "data" "helpers" slice }}
 {{ with .helpers }}
-  {{ $s.SetInMap "data" "instructors" (split . ",") }}
+  {{ $s.SetInMap "data" "helpers" (split . ",") }}
+{{ else }}
+  {{ $s.SetInMap "data" "helpers" slice }}
 {{ end }}
 
 {{/* string_date needs the day of start and of end. */}}
