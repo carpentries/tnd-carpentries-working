@@ -4,13 +4,13 @@
     <h1 class="text-[2rem] leading-[2.8125rem] font-semibold">{{ .Title }}</h1>
 
     {{ partial "subnav" . }}
-    <div class="relative grid gap-8 md:grid-cols-12">
-      <div class="col-span-12 pb-16 md:col-span-9 md:pr-20">
+    <div class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
+      <div class="pb-16 md:col-span-9 md:pr-20">
         <div class="prose max-w-none">
           {{ .Content }}
         </div>
       </div>
-      <div class="relative col-span-12 md:col-span-3">
+      <div class="relative md:col-span-3">
         <div class="sticky top-10">
           {{ .Render "sidebar" }}
         </div>

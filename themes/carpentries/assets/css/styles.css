@@ -68,7 +68,7 @@
 }
 
 p.button a{
-  @apply bg-blue-bright rounded-full text-white px-4 py-2 inline-flex items-center no-underline
+  @apply inline-flex items-center px-4 py-2 text-sm leading-tight text-white no-underline rounded-full md:text-base bg-blue-bright;
 }
 p.button a:after{
   @apply block ml-2 font-bold;
@@ -85,7 +85,7 @@ ul.badges{
 }
 
 ul.badges li{
-  @apply bg-offwhite mx-2 px-2 py-1 text-xs uppercase inline-flex items-center;
+  @apply inline-flex items-center px-2 py-1 mx-2 text-xs uppercase bg-offwhite;
 }
 ul.badges li:before{
   content: url(/icons/check.svg);

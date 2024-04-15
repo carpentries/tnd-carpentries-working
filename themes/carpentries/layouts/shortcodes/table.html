@@ -6,6 +6,6 @@
   {{ $inner = replace $inner "Has Feature" (printf `<img class="mx-auto not-prose" alt="Has Feature" src="%s" />` $icon.RelPermalink | safeHTML )}}
 {{ end }}
 
-<div class="table-striped overflow-x-scroll {{ if $features }}prose-th:font-normal prose-th:text-center{{ end }}">
+<div class="table-striped overflow-x-auto {{ if $features }}prose-th:font-normal prose-th:text-center{{ end }}">
   {{ $.Page.RenderString $inner }}
 </div>
