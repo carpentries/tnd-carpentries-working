@@ -30,13 +30,13 @@ meeting:
 <div class="p-8 mb-5 border">
   <div class="flex mb-4 -mx-2">
     {{ with .type }}
-    <div class="flex items-center mr-2"> <img class="mr-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
+    <div class="flex items-center mr-4"> <img class="mr-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
     {{ with .country }}
-    <div class="flex items-center mr-2"> <img class="mr-1" src="/flags/{{ .image }}.png" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
+    <div class="flex items-center mr-4"> <img class="mr-1" src="/flags/{{ .image }}.png" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
     {{ with .meeting }}
-      <div class="flex items-center mr-2"> <img class="mr-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
+      <div class="flex items-center mr-4"> <img class="mr-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
   </div>
   {{ with $venue := .venue }}
