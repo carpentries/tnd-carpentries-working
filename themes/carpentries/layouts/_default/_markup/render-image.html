@@ -7,7 +7,7 @@
     <img class="mx-auto lazyload" src="{{ $destination }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} />
   </div>
   {{ with .Title }}
-    <figcaption class="mt-4text-xs">
+    <figcaption class="mt-4 text-xs">
       {{ $.Page.RenderString . }}
     </figcaption>
   {{ end }}
