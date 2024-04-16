@@ -2,6 +2,16 @@
 title: Modules
 ---
 
+## Image
+
+{{% code/wrap %}}
+```markdown
+![Alternate Text](/images/cc-za.png "Image Description")
+```
+{{% /code/wrap %}}
+
+![Alternate Text](/images/cc-za.png "Image Description")
+
 ## Copy with a button
 
 {{% code/wrap %}}
