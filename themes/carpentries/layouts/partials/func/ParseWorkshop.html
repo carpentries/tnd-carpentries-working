@@ -102,12 +102,6 @@
       "name" "The Carpentries"
       "image" "/carpentries.svg"
     ) }}
-  {{ else }}
-  {{/* Else, Type is Unknown */}}
-  {{ $s.SetInMap "data" "type" (dict
-    "key" "cp-unknown"
-    "name" "Unknown"
-  ) }}
   {{ end }}
 
   {{/* For meeting, we use the same source */}}

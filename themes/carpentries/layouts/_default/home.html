@@ -1,7 +1,11 @@
 {{ define "main" }}
+<div class="container px-5 py-10 mx-auto prose">
   {{ .Content }}
+</div>
+{{/*
   {{ range site.RegularPages }}
     <h2><a class="text-blue-500" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>s
     {{ .Summary }}
   {{ end }}
+*/}}
 {{ end }}
