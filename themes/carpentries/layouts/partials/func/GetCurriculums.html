@@ -1,19 +1,25 @@
-{{/* https://feeds.carpentries.org/amy_curricula.json */}}
-{{ $data := slice }}
-{{ $currs := slice }}
+{{/*
+  GetCurriculum
+  Returned data parsed curriculums
+
+  @author @regisphilibert
+
+  @context Any
+
+  @access private
+
+  @returns Slice of Maps
+    See func/ParseCurriculum
+
+  @uses
+     - func/GetFeed
+     - func/ParseCurriculum
+*/}}
 {{ $url := "https://feeds.carpentries.org/amy_curricula.json" }}
-{{ with resources.GetRemote $url }}
-  {{ with .Err }}
-    {{ errorf "%s" . }}
-  {{ else }}
-    {{ $data = .Content | transform.Unmarshal }}
-  {{ end }}
-{{ else }}
-  {{ errorf "Unable to get remote resource %q" $url }}
-{{ end }}
-{{ with $data }}
+{{ $entries := slice }}
+{{ with partial "func/GetFeed" $url }}
   {{ range . }}
-    {{ $currs = $currs | append (partial "func/ParseCurriculum" .) }}
+    {{ $entries = $entries | append (partial "func/ParseCurriculum" .) }}
   {{ end }}
 {{ end }}
-{{ return $currs }}
+{{ return $entries }}
