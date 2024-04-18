@@ -1,0 +1,54 @@
+{{/*
+  persons
+  Shortcode to display a list of persons from a API endpoint
+
+  @author @regisphilibert
+
+  @params
+    String (.feed)
+    String (.where)
+
+  @access public
+
+  @uses
+     - func/GetPersons
+
+  @example - Mardkown
+    {{< persons feed="https://feeds.carpentries.org/all_badged_people.json" where="is_instructor,true" >}}
+*/}}
+{{- $persons := slice -}}
+{{- $endpoint := "" -}}
+{{- $where := false -}}
+{{- with .Get "feed" -}}
+  {{/* We need to prepare the arguments for the GetFeed function  */}}
+  {{- $endpoint = . -}}
+  {{- with $.Get "where" -}}
+    {{- $where = . -}}
+  {{- end -}}
+{{- end -}}
+{{ with partial "func/GetPersons" (dict "endpoint" $endpoint "where" $where) }}
+  <div class="mt-16 not-prose grid grid-cols-4 gap-16">
+    {{ range $person := uniq . }}
+      <div>
+        {{ with .image }}
+        <img class="rounded-full w-full" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
+        {{ end }}
+        <h3 class="uppercase font-bold text-center">{{ .name | default "No Name" }}</h3>
+        {{ with .urls }}
+          <ul class="my-4 flex items-center justify-center">
+            {{ range . }}
+              <li class="mx-2">
+                <a href="{{ .url }}">{{ with .icon }}<span class="inline-block w-6 fill-slate-400">{{ .Content | safeHTML }}</span>{{ end }}<span class="sr-only">{{ .service }}</span></a>
+              </li>
+            {{ end }}
+          </ul>
+        {{ end }}
+        {{ with $country := .country }}
+          {{ with .image }}
+            <img width="64" class="mt-4 block mx-auto" src="{{ . }}" alt="{{ $country.code }}" title="{{ $country.code }}">
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ end }}
+  </div>
+{{ end }}

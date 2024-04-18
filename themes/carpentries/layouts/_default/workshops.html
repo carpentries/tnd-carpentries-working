@@ -6,9 +6,11 @@
 
     <div class="relative grid gap-8 md:grid-cols-12">
       <div class="col-span-8 pb-16 pro">
-          {{ with partial "func/GetUpcomingWorkshops" "GetUpcomingWorkshops" }}
-          {{ range . }}
-            {{ partial "workshop/card" . }}
+        {{ with .Params.data_source }}
+          {{ with partial "func/GetWorkshops" . }}
+            {{ range . }}
+              {{ partial "workshop/card" . }}
+            {{ end }}
           {{ end }}
         {{ end }}
       </div>

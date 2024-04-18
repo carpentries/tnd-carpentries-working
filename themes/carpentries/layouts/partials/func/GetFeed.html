@@ -1,0 +1,67 @@
+{{/*
+  GetFeed
+  Fetch the feed url and return the response filtered if needed.
+
+  @author @regisphilibert
+
+  @context Map (.)
+    String (.endpoint)
+    String (.where)
+
+  @access private
+
+  @returns Slice | Map
+
+  @example - Go Template
+  {{ with partial "func/GetFeed" (dict
+    "endpoint" "https://feeds.carpentries.org/all_badged_people.json"
+    "where" "is_instructor,true") }}
+    {{ $data = . }}
+  {{ end }}
+*/}}
+
+{{ $url := . }}
+{{ $args := dict }}
+{{/* We need to build the arguments object */}}
+{{ if reflect.IsMap . }}
+  {{ with .endpoint }}
+    {{ $args = merge $args (dict "endpoint" .) }}
+  {{ end }}
+  {{ with .where }}
+    {{ $args = merge $args (dict "where" .) }}
+  {{ end }}
+{{ else }}
+ {{ $args = dict "endpoint" . }}
+{{ end }}
+{{ $data := slice }}
+{{ with resources.GetRemote $args.endpoint }}
+  {{ with .Err }}
+    {{ errorf "%s" . }}
+  {{ else }}
+    {{ $data = .Content | transform.Unmarshal }}
+    {{/* if a where is set and the response data is a slice,
+        we retrieve the key and value */}}
+    {{ if reflect.IsSlice $data }}
+      {{ with $args.where }}
+        {{ $params := split . "," }}
+        {{ $key := index $params 0 }}
+        {{ $value := true }}
+        {{ if isset $params 1 }}
+          {{/* We handle false positive from the parameter string type */}}
+          {{ $value = index $params 1 }}
+          {{ if eq $value "false" }}
+            {{ $value = false }}
+          {{ end }}
+          {{ if eq $value "true" }}
+            {{ $value = true }}
+          {{ end }}
+        {{ end }}
+        {{/* And apply the filtering */}}
+        {{ $data = where $data $key $value }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ errorf "Unable to get remote resource %q" $url }}
+{{ end }}
+{{ return $data }}
