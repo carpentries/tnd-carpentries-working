@@ -1,11 +1,41 @@
 {{ define "main" }}
-<div class="container px-5 py-10 mx-auto prose">
-  {{ .Content }}
+
+<div class="py-10 bg-blue-light">
+  <div class="container mx-auto text-center">
+    I want to
+  </div>
 </div>
-{{/*
-  {{ range site.RegularPages }}
-    <h2><a class="text-blue-500" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>s
-    {{ .Summary }}
-  {{ end }}
-*/}}
+
+<div class="relative pt-40 pb-36">
+  <img class="absolute inset-0 object-fill w-full h-full brightness-[.85] z-10" src="hero-background.jpg">
+  <div class="container relative z-20 mx-auto">
+    <h1 class="text-[2.625rem] leading-[3.125rem] text-white max-w-2xl font-semibold lg:pr-10">Teaching foundational coding and data science workshops to researchers worldwide since 1998.</h1>
+  </div>
+</div>
+
+<div class="py-16 bg-offwhite">
+  <div class="container mx-auto">
+    <h2 class="text-[1.75rem] leading-[2.125rem] text-center">Our diverse and global community is comprised of</h2>
+    <div class="grid max-w-4xl gap-3 mx-auto my-8 md:grid-cols-4">
+      <div class="stat">
+        More than <strong>3,000</strong> volunteers
+      </div>
+      <div class="stat">
+        About <strong>8,000</strong> learners
+      </div>
+      <div class="stat">
+        More than <strong>150</strong> countries
+      </div>
+      <div class="stat">
+        And a <strong>4th</strong> stat
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <a class="btn btn-outline" href="#">Join our community</a>
+    </div>
+  </div>
+
+
+</div>
+
 {{ end }}
