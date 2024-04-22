@@ -9,7 +9,7 @@ nav:
 - name: Our impact
   url: /about-us/impact
 - name: Our funding
-  url: /
+  url: /about-us/funding
 - name: Our team
   url: /
 - name: Our community
