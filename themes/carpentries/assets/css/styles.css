@@ -98,15 +98,7 @@ ul.badges li:before{
 }
 
 .stat{
-  display: flex;
-  text-transform: uppercase;
-  text-align: center;
-  aspect-ratio: 1/1;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #ccc;
-  border-radius: 100%;
+  @apply flex flex-col items-center justify-center text-center uppercase bg-gray-300 rounded-full aspect-square max-w-[240px] w-full mx-auto;
 }
 .stat strong{
   display: block;
