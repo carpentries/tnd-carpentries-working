@@ -79,7 +79,7 @@ main:
   weight: 20
 - identifier: instructor-training
   name: Instructor Training
-  url: "#"
+  url: "/instructor-training/"
   parent: learn
   weight: 30
 - identifier: trainer-training
