@@ -13,7 +13,7 @@ nav:
 - name: Our community
   url: /about-us/community
 - name: Contact us
-  url: /
+  url: /about-us/contact
 widgets:
 - newsletter
 - sponsors
