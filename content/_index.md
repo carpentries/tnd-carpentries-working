@@ -3,16 +3,25 @@ title: 'Home'
 date: 2023-01-01T08:00:00-07:00
 blocks:
 - layout: select-cta
+  options:
+    - copy: Become a volunteer
+      url: #
+    - copy: Find a resource
+      url: #
+    - copy: Get Involved
+      url: #
+    - copy: Host a workshop
+      url: #
 - layout: hero
   title: Teaching foundational coding and data science workshops to researchers worldwide since 1998.
   image: /images/hero-background.jpg
 - layout: stats
   title: Our diverse and global community is comprised of
   stats:
-  - More than **3,000** volunteers
-  - About **8,000** learners
-  - More than **150** countries
-  - And a **4th** stat
+    - More than **3,000** volunteers
+    - About **8,000** learners
+    - More than **150** countries
+    - And a **4th** stat
   cta:
     copy: Join our community
     url: '#'
@@ -24,6 +33,16 @@ blocks:
   cta:
     copy: Find a workshop
     url: '#'
+- layout: quote-slider
+  slides:
+    - quote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      image: ethan-white.png
+      name: Ethan White 🇺🇸
+      copy: Associate Professor and Moore Investigator in the Department of Wildlife Ecology and Conservation and the Informatics Institute at the University of Florida
+    - quote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      image: ethan-white.png
+      name: Ethan White 🇺🇸
+      copy: Associate Professor and Moore Investigator in the Department of Wildlife Ecology and Conservation and the Informatics Institute at the University of Florida
 - layout: 2-col-image-text
   image: fifty-fifty-background.jpg
   title: Subscribe to our newsletter

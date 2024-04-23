@@ -70,10 +70,13 @@ html, body{
   background-color: #f2f2f2; /* or any other shade of gray you prefer */
 }
 
-p.button a{
+p.button a,
+.btn-blue
+{
   @apply inline-flex items-center px-4 py-2 text-sm leading-tight text-white no-underline rounded-full md:text-base bg-blue-bright;
 }
-p.button a:after{
+p.button a:after,
+.btn-blue:after{
   @apply block ml-2 font-bold;
   width: 16px;
   height: 21px;
@@ -147,4 +150,19 @@ ul.badges li:before{
   width: 13px;
   height: 13px;
   display: inline-block;
+}
+
+.testimonial-quote:after {
+  content: '';
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #FF4955;
+  width: 40px;
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }

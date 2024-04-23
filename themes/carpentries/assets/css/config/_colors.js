@@ -27,6 +27,9 @@ module.exports = (theme) => ({
     'mid': '#585858',
     'dark': '#383838'
   },
+  red: {
+    'bright': '#FF4955'
+  },
   secondary: {
     ...colors.slate,
   }
