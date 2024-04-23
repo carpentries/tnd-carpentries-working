@@ -35,6 +35,5 @@ Because contact information may be used in various places across the site, we us
    * Code of Conduct Committee: {{< param coc_email >}}
 
 * On social media
-**Can params be used inside links? These do not work.**
-    * [Youtube]({{ < param youtube > }})
-    * [Mastodon]({{ < param mastodon > }})
+    * [Youtube]({{< param youtube >}})
+    * [Mastodon]({{< param mastodon >}})
