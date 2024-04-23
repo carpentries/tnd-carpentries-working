@@ -9,7 +9,7 @@ nav:
 - name: Our funding
   url: /about-us/funding
 - name: Our team
-  url: /
+  url: /about-us/team
 - name: Our community
   url: /
 - name: Contact us
