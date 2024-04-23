@@ -14,44 +14,24 @@ nav:
   url: /#
 ---
 
-## What is a Carpentries workshop?
 
-Dessert tootsie roll shortbread danish jelly-o pie gummies. Cake lemon drops pudding danish bear claw jelly-o. Oat cake cake cake topping candy cake donut brownie.
+## Carpentries workshops
 
-Sesame snaps halvah oat cake sesame snaps chocolate bar lemon drops gingerbread. Bonbon pie pie macaroon jujubes lemon drops tart. Sugar plum halvah caramels jelly-o tootsie roll sugar plum chocolate bar.
+* Current workshops page: https://carpentries.org/workshops/ 
 
-![Three people looking at computer screens](/assets/workshops-photo.jpg "A workshop in session")
+## Organizing a workshop
 
-## Carpentries by the numbers
+### Centrally organized workshops
 
-Dessert chocolate toffee chocolate chocolate cake. Caramels apple pie chocolate cake bear claw powder chocolate. Chocolate bar jelly-o halvah macaroon sweet roll fruitcake. Chocolate bear claw oat cake apple pie tart lemon drops shortbread.
+Centrally-Organised workshops come with the full support of The Carpentries Workshop Administration team! These workshops are organised for a fee. The Regional Coordinator for your region will locate and coordinate instructors for the workshop. We want to ensure your workshop is successful. Therefore we ask that you request Centrally-Organised workshops at least 2-3 months before your desired workshop date. To learn more about the process for organising a workshop please review the Workshop Checklist.
 
-Tootsie roll cookie pudding cheesecake soufflé jelly-o sweet candy carrot cake. Dessert chupa chups gingerbread sugar plum pie pie sesame snaps pastry. Candy canes jelly-o wafer chocolate tiramisu croissant muffin chupa chups candy canes.
+[Request a centrally organized workshop]({{< param amy_req_cow >}})
+{.button}
 
-## Workshop Curriculum
 
-Jelly halvah carrot cake pudding lollipop muffin topping candy. Cheesecake pie cupcake sweet roll sesame snaps marshmallow cotton candy. Shortbread soufflé muffin sweet carrot cake powder pudding cotton candy.
+### Self organized workshops 
 
-Muffin powder jelly beans gummi bears gummi bears cheesecake. Gingerbread fruitcake bonbon chupa chups croissant. Chocolate cake halvah donut toffee sweet sesame snaps carrot cake jelly.
+The Carpentries welcomes you to organise and run your own workshop. This means you are already connected with our certified Instructors and will work with them on all aspects of workshop organisation. When planning a Self-Organised workshop we ask that you complete the Self-Organised workshop notification form to notify us of your planned workshop so that we can add your workshop to our website, provide support (in the form of survey result links and AMI instances for Genomics workshops), and get instructors and helpers credit for the workshops they teach. To learn more about the process for organising a workshop please review the Workshop Checklist. Since you will be taking care of all the logistics, there is no administrative fee due to The Carpentries for running a Self-Organised workshop.
 
-## Organising a workshop
-
-Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.
-
-### Requesting a centrally organised workshop
-
-Jelly gummies jujubes soufflé chocolate bar. Liquorice dragée cheesecake cake brownie. Marzipan bear claw tart pie biscuit brownie donut.
-
-## Workshop Cost
-
-### Travel expenses for instructors
-
-Jelly gummies jujubes soufflé chocolate bar. Liquorice dragée cheesecake cake brownie. Marzipan bear claw tart pie biscuit brownie donut.
-
-### Workshop Administration Financial Support
-
-Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.
-
-## Contact Us
-
-Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake. Brownie cotton candy sweet roll chocolate topping halvah cookie carrot cake caramels.
+[Register a self organized workshop]({{< param amy_reg_sow >}})
+{.button}
