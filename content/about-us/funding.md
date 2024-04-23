@@ -11,7 +11,7 @@ nav:
 - name: Our team
   url: /about-us/team
 - name: Our community
-  url: /
+  url: /about-us/community
 - name: Contact us
   url: /
 widgets:
