@@ -12,3 +12,8 @@ coc_email: coc@carpentries.org
 
 youtube: https://www.youtube.com/thecarpentries
 mastodon: https://hachyderm.io/@thecarpentries
+
+# AMY links
+amy_base: https://amy.carpentries.org
+amy_req_cow: https://amy.carpentries.org/forms/request_workshop/
+amy_reg_sow: https://amy.carpentries.org/forms/self-organised/
