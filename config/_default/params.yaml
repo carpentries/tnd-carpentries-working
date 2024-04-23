@@ -1,1 +1,14 @@
 git_repo: https://github.com/theNewDynamic/carpentries.org
+
+# General email addresses
+
+team_email: team@carpentries.org
+membership_email: membership@carpentries.org
+workshops_email: workshops@carpentrires.org
+instructor_training_email: instructor.training@carpentries.org
+coc_email: coc@carpentries.org
+
+# Social media platformss
+
+youtube: https://www.youtube.com/thecarpentries
+mastodon: https://hachyderm.io/@thecarpentries

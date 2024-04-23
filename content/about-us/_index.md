@@ -1,21 +1,19 @@
 ---
 title: About Us
 layout: single
-date: 2018-01-30T14:45:08+00:00
-lastmod: 2022-12-11T14:45:08+00:00
 nav:
 - name: About us
   url: /about-us
 - name: Our impact
   url: /about-us/impact
 - name: Our funding
-  url: /
+  url: /about-us/funding
 - name: Our team
-  url: /
+  url: /about-us/team
 - name: Our community
-  url: /
+  url: /about-us/community
 - name: Contact us
-  url: /
+  url: /about-us/contact
 widgets:
 - newsletter
 - sponsors
