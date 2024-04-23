@@ -10,6 +10,8 @@ nav:
   url: /workshops/workshops-faq/
 - name: Browse lessons
   url: /#
+- name: Upcoming workshops
+  url: /workshops/upcoming-workshops
 ---
 
 
