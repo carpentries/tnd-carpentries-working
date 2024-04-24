@@ -1,0 +1,13 @@
+<div class="flex justify-between items-center mb-4">
+  <label for="search" class="text-xl font-bold block">Search workshops</label>
+  <button id="clear-filters" class="border rounded text-sm bg-slate-200 px-4 py-2">Clear filters</button>
+</div>
+<input aria-labelledby="search" {placeholder} autocomplete="off" type="search" name="q" id="search" class="search-input mb-4 block w-full rounded border px-4 py-2">
+{{ range .filters }}
+<select class="border px-4 py-2 mb-4 w-full rounded " name="{{ .key }}" id="{{ .key }}">
+  <option value="none">Filter by {{ .label }}</option>
+  {{ range .options }}
+    <option value="{{ . }}">{{ . }}</option>
+  {{ end }}
+</select>
+{{ end }}

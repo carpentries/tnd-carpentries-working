@@ -27,7 +27,11 @@ meeting:
   name: In Person
 ---
 */}}
-<div class="p-8 mb-5 border">
+<div class="p-8 mb-5 border"
+  data-country="{{ .country.name }}"
+  data-delivery="{{ .meeting.name | default "in-person" }}"
+  data-curriculum="{{ .curriculum.name }}"
+>
   <div class="flex mb-4 -mx-2">
     {{ with .type }}
     <div class="flex items-center mr-4"> <img class="mx-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
@@ -40,7 +44,7 @@ meeting:
     {{ end }}
   </div>
   {{ with $venue := .venue }}
-  <h3 class="text-base md:text-[1.75rem] leading-[2.125rem] font-semibold">
+  <h3 class="title text-base md:text-[1.75rem] leading-[2.125rem] font-semibold">
     {{ with $.url }}
       <a class="underline hover:text-blue-hover text-gray-dark" href="{{ . }}">{{ $venue }}</a>
     {{ else }}

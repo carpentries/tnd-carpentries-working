@@ -1,0 +1,40 @@
+{{ $s := newScratch }}
+{{ $s.Set "data" dict }}
+
+{{ $countries := slice }}
+{{ $meetings := slice }}
+{{ $curriculums := slice }}
+{{ $filters := slice }}
+{{ range . }}
+  {{ with .country.name }}
+    {{ $countries = $countries | append . }}
+  {{ end }}
+  {{ with .meeting.name }}
+    {{ $meetings = $meetings | append . }}
+  {{ end }}
+  {{ with .curriculum.name }}
+  {{ $curriculums = $curriculums | append . }}
+{{ end }}
+{{ end }}
+{{ with $countries }}
+  {{ $filters = $filters | append (dict
+    "key" "country"
+    "label" "Country"
+    "options" (sort (uniq .))) }}
+{{ end }}
+{{ with $meetings }}
+  {{ $filters = $filters | append (dict
+    "key" "delivery"
+    "label" "Delivery"
+    "options" (sort (uniq .))) }}
+{{ end }}
+{{ with $curriculums }}
+  {{ $filters = $filters | append (dict
+    "key" "curriculum"
+    "label" "Curriculum"
+    "options" (sort (uniq .))) }}
+{{ end }}
+{{ with $filters }}
+  {{ $s.SetInMap "data" "filters" . }}
+{{ end }}
+{{ return $s.Get "data" }}
