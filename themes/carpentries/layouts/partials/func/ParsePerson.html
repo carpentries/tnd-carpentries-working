@@ -46,7 +46,9 @@
 {{ with .person_name }}
   {{ $s.SetInMap "data" "name" . }}
 {{ end }}
-
+{{ with .name }}
+  {{ $s.SetInMap "data" "name" . }}
+{{ end }}
 {{ $urls := slice }}
 {{ with .twitter }}
   {{ $urls = $urls | append (dict
