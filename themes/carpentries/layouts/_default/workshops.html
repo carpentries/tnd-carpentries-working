@@ -16,23 +16,23 @@
   {{ end }}
   <div class="container px-5 mx-auto">
     {{ partial "breadcrumbs" . }}
-    <h1 class="text-5xl font-bold">{{ .Title }}</h1>
+    <h1 class="text-[2rem] leading-[2.8125rem] font-semibold mb-6">{{ .Title }}</h1>
     {{ partial "subnav" . }}
     {{ $countries := slice }}
-    <div id="filter" class="relative grid gap-8 md:grid-cols-12">
-      <div class="col-span-8 pb-16 pro">
+    <div id="filter" class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
+      <div class="relative md:col-span-4">
+        <div class="sticky top-10">
+          {{ partial "filters" $filters }}
+          {{ .Render "sidebar" }}
+        </div>
+      </div>
+      <div class="pb-16 md:col-span-8 pro md:order-first">
         <div class="filtered">
           {{ range $workshops }}
             {{ partial "workshop/card" . }}
           {{ end }}
         </div>
-        <ul class="pagination flex justify-center text-2xl"></ul>
-      </div>
-      <div class="relative col-span-4">
-        <div class="sticky top-10">
-          {{ partial "filters" $filters }}
-          {{ .Render "sidebar" }}
-        </div>
+        <ul class="flex justify-center text-2xl pagination"></ul>
       </div>
     </div>
 
