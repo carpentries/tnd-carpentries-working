@@ -1,5 +1,7 @@
 const valueNames = [
   "title",
+  "instructors",
+  "helpers",
   {data: ["country", "delivery", "curriculum"]},
 ]
 const placeholder = "Type to Filter by name or keyword"
@@ -15,6 +17,7 @@ document.addEventListener(documentLoad, function() {
     //pagination: true
   };
   var userList = new List('filter', options);
+  const searchInput = document.querySelector('.search-input')
   const filterSelects = document.querySelectorAll('select[name]')
   const filterClear = document.getElementById('clear-filters')
   const filtersStart = {
@@ -29,10 +32,13 @@ document.addEventListener(documentLoad, function() {
       delivery: [],
       curriculum: []
     }
-    userList.filter()
+    searchInput.value = ""
     filterSelects.forEach(select => {
       select.value = "none"
     })
+    userList.filter()
+    userList.search()
+
   })
   filterSelects.forEach(select => {
     const filterKey = select.getAttribute('name')

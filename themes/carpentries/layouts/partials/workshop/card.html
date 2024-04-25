@@ -59,12 +59,12 @@ meeting:
   {{ end }}
   {{ with .instructors }}
     <div class="mb-2 text-xs">
-      <strong class="font-bold">Instructors</strong>: {{ delimit . ", " }}
+      <strong class="font-bold">Instructors</strong>: <span class="instructors">{{ delimit . ", " }}</span>
     </div>
   {{ end }}
   {{ with .helpers }}
     <div class="mb-4 text-xs">
-      <strong class="font-bold">Helpers</strong>: {{ delimit . ", " }}
+      <strong class="font-bold">Helpers</strong>: <span class="helpers">{{ delimit . ", " }}</span>
     </div>
   {{ end }}
 
