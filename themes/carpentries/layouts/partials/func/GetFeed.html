@@ -47,8 +47,15 @@
   {{ end }}
 {{ else }}
   {{ $location := index site.Data $args.endpoint }}
-  {{ if eq $args.endpoint "governance.people" }}
-    {{ $location = index site.Data "governance" "people" }}
+  {{ if in $args.endpoint "." }}
+    {{ $paths := split $args.endpoint "." }}
+
+    {{ if eq (len $paths) 2 }}
+      {{ $location = index site.Data (index $paths 0) (index $paths 1) }}
+    {{ end }}
+    {{ if eq (len $paths) 3 }}
+      {{ $location = index site.Data (index $paths 0) (index $paths 1) (index $paths 2) }}
+    {{ end }}
   {{ end }}
   {{ with $location}}
     {{ $data = . }}

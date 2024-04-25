@@ -1,6 +1,6 @@
 - name: Kari L. Jordan, PhD
   pronouns: she/ella
-  pic: karijordan
+  pic: karijordan.jpg
   position: Executive Director
   jobplan: https://docs.google.com/document/d/14wwmQyOKHNivu2xTGbfHCXUtXrVzM_lhRPtfpKfGytQ/edit
   email: kariljordan@carpentries.org
@@ -12,7 +12,7 @@
 
 - name: Erin Becker, PhD
   pronouns: she/her/hers
-  pic: erinbecker
+  pic: erinbecker.jpg
   position: Associate Director
   jobplan: https://docs.google.com/document/d/1E6-36D6JqtLxnuHRARVulYs8vpQFYfEdGiRcAZZnjfQ/edit
   email: ebecker@carpentries.org
@@ -24,7 +24,7 @@
 
 - name: Toby Hodges, PhD
   pronouns:  he/him/his
-  pic: tobyhodges
+  pic: tobyhodges.jpg
   position: Director of Curriculum
   lead: Curriculum Team Lead
   email: tobyhodges@carpentries.org
@@ -34,7 +34,7 @@
   et: false
 
 - name: SherAaron Hurt
-  pic: sheraaronhurt
+  pic: sheraaronhurt.jpg
   pronouns: she/her
   position: Director of Workshops and Training
   lead: Workshops Team Lead
@@ -47,7 +47,7 @@
   alt_text:
 
 - name: Robert Davey, PhD
-  pic: robertdavey
+  pic: robertdavey.jpg
   pronouns: he/him/his
   position: Director of Technology
   lead: Technology Team Lead
@@ -62,7 +62,7 @@
   alt_text:
 
 - name: Oscar Masinyana
-  pic: oscarmasinyana
+  pic: oscarmasinyana.jpg
   pronouns: he/him/they/them
   position: Communications Manager
   email: oscar.masinyana@carpentries.org
@@ -76,7 +76,7 @@
 
 - name: Maneesha Sane
   pronouns: Any pronouns will do
-  pic: maneeshasane
+  pic: maneeshasane.jpg
   position: Associate Director of Technology
   jobplan: https://docs.google.com/document/d/1vzvRaH-ilaAdkzk3LZCMvBsBYlokX_5mU5aA7Wvo9PQ/edit
   email: maneesha@carpentries.org
@@ -87,7 +87,7 @@
 
 - name: Danielle Sieh
   pronouns: she/her/hers
-  pic: daniellesieh
+  pic: daniellesieh.jpg
   position: Workshops and Training Manager
   github: danielle06
   email: danielle@carpentries.org
@@ -97,7 +97,7 @@
 
 - name: Angelique Trusler, PhD
   pronouns: Any pronouns will do
-  pic: angeliquetrusler
+  pic: angeliquetrusler.jpg
   position: Community Manager
   email: angelique@carpentries.org
   github: elletjies

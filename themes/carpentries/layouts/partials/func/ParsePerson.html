@@ -26,6 +26,9 @@
   @returns Map
     String (.name)
     String (.image)
+    String (.term)
+    String (.position)
+    String (.pronouns)
     Slice of Map (.urls)
       - String (.service)
         Resource (.icon)
@@ -49,14 +52,13 @@
 {{ with .name }}
   {{ $s.SetInMap "data" "name" . }}
 {{ end }}
-{{ $urls := slice }}
-{{ with .twitter }}
-  {{ $urls = $urls | append (dict
-    "service" "twitter"
-    "icon" $twitter_icon
-    "url" (printf "https://twitter.com/%s" .)
-  )}}
+
+{{ range $key := slice "term" "position" "pronouns" }}
+  {{ with index $ $key }}
+    {{ $s.SetInMap "data" $key . }}
+  {{ end }}
 {{ end }}
+
 {{ $image := "" }}
 {{ with .pic }}
   {{ if in . "." }}
@@ -77,20 +79,63 @@
     {{ with $.person_name }}
       {{ $s.SetInMap "data" "imageAlt" (printf "GitHub profile photo of %s" .) }}
     {{ end }}
-    {{ $urls = $urls | append (dict
-      "service" "github"
-      "icon" $github_icon
-      "url" (printf "https://github.com/%s" .)
-    )}}
   {{ end }}
 {{ end }}
 
+{{ $urls := slice }}
+{{ with .email }}
+{{ $urls = $urls | append (dict
+  "service" "email"
+  "icon" $link_icon
+  "url" (printf "mailto:%s" .)
+)}}
+{{ end }}
+
+{{ with .github }}
+  {{ $urls = $urls | append (dict
+    "service" "github"
+    "icon" $github_icon
+    "url" (printf "https://github.com/%s" .)
+  )}}
+{{ end }}
+
+{{ with .linkedin }}
+  {{ $urls = $urls | append (dict
+    "service" "linkedin"
+    "icon" $link_icon
+    "url" (printf "https://www.linkedin.com/in/%s" .)
+  )}}
+{{ end }}
 
 {{ with .orcid }}
   {{ $urls = $urls | append (dict
     "service" "orcid"
     "icon" $orcid_icon
     "url" (printf "https://orcid.org/%s" .)
+  )}}
+{{ end }}
+
+{{ with .twitter }}
+  {{ $urls = $urls | append (dict
+    "service" "twitter"
+    "icon" $twitter_icon
+    "url" (printf "https://twitter.com/%s" .)
+  )}}
+{{ end }}
+
+{{ with .mastodon }}
+  {{ $urls = $urls | append (dict
+    "service" "mastodon"
+    "icon" $link_icon
+    "url" .
+  )}}
+{{ end }}
+
+{{ with .calendly }}
+  {{ $urls = $urls | append (dict
+    "service" "calendly"
+    "icon" $link_icon
+    "url" (printf "https://calendly.com/%s" .)
   )}}
 {{ end }}
 

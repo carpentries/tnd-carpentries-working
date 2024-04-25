@@ -31,9 +31,20 @@
     {{ range $person := uniq . }}
       <div>
         {{ with .image }}
-        <img class="rounded-full w-full" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
+        <img class="rounded-full w-full mb-3" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
         {{ end }}
-        <h3 class="uppercase font-bold text-center">{{ .name | default "No Name" }}</h3>
+        <div class="text-center">
+          <h3 class="uppercase font-bold text-center">{{ .name | default "No Name" }}</h3>
+          {{ with .position }}
+            {{ . }}
+          {{ end }}
+          {{ with .pronouns }}
+            <div class="italic">Pronouns: {{ . }}</div>
+          {{ end }}
+          {{ with .term }}
+            <div>{{ . }}</div>
+          {{ end }}
+        </div>
         {{ with .urls }}
           <ul class="my-4 flex items-center justify-center">
             {{ range . }}
