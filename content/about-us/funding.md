@@ -1,19 +1,6 @@
 ---
 title: Funding
 layout: single
-nav:
-- name: About us
-  url: /about-us
-- name: Our impact
-  url: /about-us/impact
-- name: Our funding
-  url: /about-us/funding
-- name: Our team
-  url: /about-us/team
-- name: Our community
-  url: /about-us/community
-- name: Contact us
-  url: /about-us/contact
 widgets:
 - newsletter
 - sponsors

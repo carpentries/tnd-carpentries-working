@@ -11,6 +11,41 @@ top:
   - name: Library Carpentry
     url: https://librarycarpentry.org/
     weight: 40
+about:
+- name: About us
+  pageRef: /about-us
+  weight: 10
+- name: Our impact
+  pageRef: /about-us/impact
+  weight: 20
+- name: Our funding
+  pageRef: /about-us/funding
+  weight: 30
+- name: Our team
+  pageRef: /about-us/team
+  weight: 40
+- name: Our community
+  pageRef: /about-us/community
+  weight: 50
+- name: Contact us
+  pageRef: /about-us/contact
+  weight: 60
+workshops:
+- name: Workshops
+  pageRef: /workshops
+  weight: 10
+- name: Request a workshop
+  pageRef: /workshops/request-workshop
+  weight: 20
+- name: Workshops FAQ
+  pageRef: /workshops/workshops-faq
+  weight: 30
+- name: Browse lessons
+  url: /#
+  weight: 40
+- name: Upcoming workshops
+  pageRef: /workshops/upcoming-workshops
+  weight: 50
 main:
 - identifier: about-us
   name: About us
@@ -19,47 +54,47 @@ main:
   weight: 10
 - identifier: about-the-carpentries
   name: About The Carpentries
-  url: "/about-us/"
+  pageRef: "/about-us/"
   parent: about-us
   weight: 10
 - identifier: governance
   name: Governance
-  url: "/about-us/governance/"
+  pageRef: "governance"
   parent: about-us
   weight: 20
 - identifier: values
   name: Values
-  url: "/about-us/values/"
+  pageRef: "/about-us/values/"
   parent: about-us
   weight: 30
 - identifier: impact
   name: Impact
-  url: "/about-us/impact/"
+  pageRef: "/about-us/impact/"
   parent: about-us
   weight: 40
 - identifier: team
   name: Team
-  url: "/about-us/team/"
+  pageRef: "/about-us/team/"
   parent: about-us
   weight: 50
 - identifier: careers
   name: Careers
-  url: "/about-us/careers/"
+  pageRef: "/about-us/careers/"
   parent: about-us
   weight: 60
 - identifier: financials
   name: Financials
-  url: "/about-us/financials/"
+  pageRef: "/about-us/financials/"
   parent: about-us
   weight: 70
 - identifier: publications
   name: Publications
-  url: "/about-us/publications/"
+  pageRef: "/about-us/publications/"
   parent: about-us
   weight: 80
 - identifier: contact-us
   name: Contact us
-  url: "/about-us/contact-us/"
+  pageRef: "/about-us/contact-us/"
   parent: about-us
   weight: 90
 - identifier: learn
@@ -69,27 +104,27 @@ main:
   weight: 20
 - identifier: lessons
   name: Lessons
-  url: "#"
+  pageRef: "#"
   parent: learn
   weight: 10
 - identifier: workshops
   name: Workshops
-  url: "/workshops/"
+  pageRef: "/workshops/"
   parent: learn
   weight: 20
 - identifier: instructor-training
   name: Instructor Training
-  url: "/instructor-training/"
+  pageRef: "/instructor-training/"
   parent: learn
   weight: 30
 - identifier: trainer-training
   name: Trainer Training
-  url: "/trainer-training/"
+  pageRef: "/trainer-training/"
   parent: learn
   weight: 40
 - identifier: lesson-development
   name: Lesson Development
-  url: "/lesson-development/"
+  pageRef: "/lesson-development/"
   parent: learn
   weight: 50
 - identifier: volunteer
@@ -129,7 +164,7 @@ main:
   weight: 40
 - identifier: host-a-workshop
   name: Host a workshop
-  url: "/workshops/request-workshop/"
+  pageRef: "/workshops/request-workshop/"
   parent: host
   weight: 10
 - identifier: host-a-training
@@ -164,7 +199,7 @@ main:
   weight: 30
 - identifier: blog
   name: Blog
-  url: "/blog/"
+  pageRef: "/blog/"
   parent: null
   weight: 60
 - identifier: donate-btn

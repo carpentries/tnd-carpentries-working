@@ -1,23 +1,14 @@
 ---
 title: Workshops
 layout: single
-nav:
-- name: Workshops
-  url: /workshops/
-- name: Request a workshop
-  url: /workshops/request-workshop/
-- name: Workshops FAQ
-  url: /workshops/workshops-faq/
-- name: Browse lessons
-  url: /#
-- name: Upcoming workshops
-  url: /workshops/upcoming-workshops
+cascade:
+  nav: workshops
 ---
 
 
 ## Carpentries workshops
 
-* Current workshops page: https://carpentries.org/workshops/ 
+* Current workshops page: https://carpentries.org/workshops/
 
 ## Organizing a workshop
 
@@ -29,7 +20,7 @@ Centrally-Organised workshops come with the full support of The Carpentries Work
 {.button}
 
 
-### Self organized workshops 
+### Self organized workshops
 
 The Carpentries welcomes you to organise and run your own workshop. This means you are already connected with our certified Instructors and will work with them on all aspects of workshop organisation. When planning a Self-Organised workshop we ask that you complete the Self-Organised workshop notification form to notify us of your planned workshop so that we can add your workshop to our website, provide support (in the form of survey result links and AMI instances for Genomics workshops), and get instructors and helpers credit for the workshops they teach. To learn more about the process for organising a workshop please review the Workshop Checklist. Since you will be taking care of all the logistics, there is no administrative fee due to The Carpentries for running a Self-Organised workshop.
 
