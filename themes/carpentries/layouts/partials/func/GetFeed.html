@@ -55,8 +55,7 @@
   {{ end }}
 {{ end }}
 
-{{/* if a where is set and the response data is a slice,
-        we retrieve the key and value */}}
+{{/* if a where is set and the response data is a slice, we retrieve the key and value */}}
 {{ if reflect.IsSlice $data }}
   {{ with $args.where }}
     {{ $params := split . "|" }}

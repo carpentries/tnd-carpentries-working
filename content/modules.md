@@ -246,6 +246,36 @@ We help people build knowledge by creating a conducive environment for the excha
   {{< /stat >}}
 {{< /grid >}}
 
+## Persons
+
+### From a data file
+Persons from the `/data/governance.people/` data file where the `active` and `advisory` key are `true`
+
+```markdown
+{{</* persons feed="governance.people" where="active,true | advisory,true" */>}}
+```
+
+{{< persons feed="governance.people" where="active,true | advisory,true" >}}
+
+### From a feed
+
+Persons from the `https://feeds.carpentries.org/all_badged_people.json` feed where `is_trainer` is true and `country`is `NZ`
+
+```markdown
+{{</* persons feed="https://feeds.carpentries.org/all_badged_people.json" where="is_trainer,true | country,NZ" */>}}
+```
+{{< persons feed="https://feeds.carpentries.org/all_badged_people.json" where="is_trainer,true | country,NZ" >}}
+
+## Committees
+
+To list committees and their members as set through the `data/governance.committees` file.
+
+```markdown
+{{</* committees */>}}
+```
+
+{{< committees >}}
+
 ## Accordions
 
 {{% code/wrap %}}

@@ -57,18 +57,34 @@
     "url" (printf "https://twitter.com/%s" .)
   )}}
 {{ end }}
-
-{{ with .github }}
-  {{ $s.SetInMap "data" "image" (printf "https://avatars.githubusercontent.com/%s" .) }}
-  {{ with $.person_name }}
-    {{ $s.SetInMap "data" "imageAlt" (printf "GitHub profile photo of %s" .) }}
+{{ $image := "" }}
+{{ with .pic }}
+  {{ if in . "." }}
+    {{ $image = . }}
   {{ end }}
-  {{ $urls = $urls | append (dict
-    "service" "github"
-    "icon" $github_icon
-    "url" (printf "https://github.com/%s" .)
-  )}}
 {{ end }}
+
+{{ with $image }}
+  {{ with partial "func/GetAssetByFilename" . }}
+    {{ $s.SetInMap "data" "image" .RelPermalink }}
+    {{ with $.person_name }}
+      {{ $s.SetInMap "data" "imageAlt" (printf "Profile photo of %s" .) }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ with .github }}
+    {{ $s.SetInMap "data" "image" (printf "https://avatars.githubusercontent.com/%s" .) }}
+    {{ with $.person_name }}
+      {{ $s.SetInMap "data" "imageAlt" (printf "GitHub profile photo of %s" .) }}
+    {{ end }}
+    {{ $urls = $urls | append (dict
+      "service" "github"
+      "icon" $github_icon
+      "url" (printf "https://github.com/%s" .)
+    )}}
+  {{ end }}
+{{ end }}
+
 
 {{ with .orcid }}
   {{ $urls = $urls | append (dict
