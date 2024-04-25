@@ -10,7 +10,6 @@ command = "hugo --environment staging --minify"
 
 [context.production]
 
-
 [context.production.environment]
 HUGO_ENV = "production"
 
