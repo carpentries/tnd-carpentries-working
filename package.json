@@ -2,7 +2,8 @@
   "comments": {
     "dependencies": {},
     "devDependencies": {
-      "@alpinejs/intersect": "carpentries",
+      "@alpinejs/intersect": "project",
+      "@tailwindcss/forms": "carpentries",
       "@tailwindcss/typography": "project",
       "alpinejs": "project",
       "postcss": "project",
@@ -13,6 +14,7 @@
   "dependencies": {},
   "devDependencies": {
     "@alpinejs/intersect": "^3.13.7",
+    "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.0",
     "alpinejs": "^3.13.7",
     "postcss": "^8.4.35",

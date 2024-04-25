@@ -1,4 +1,5 @@
 const typography = require('@tailwindcss/typography');
+const forms = require('@tailwindcss/forms');
 
 module.exports = {
 	theme: {
@@ -9,5 +10,5 @@ module.exports = {
 		},
 	},
 	content: ['./hugo_stats.json'],
-	plugins: [typography],
+	plugins: [typography, forms],
 };
