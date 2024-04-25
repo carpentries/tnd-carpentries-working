@@ -1,7 +1,10 @@
 <div>
+  {{ $toc := .Params.hideToc }}
   {{ with .Content }}
-  {{ partial "widgets/toc" $ }}
-  <hr class="my-8">
+    {{ if ne $toc true }}
+      {{ partial "widgets/toc" $ }}
+      <hr class="my-8">
+    {{ end }}
   {{ end }}
 
   {{ with .Params.widgets }}
