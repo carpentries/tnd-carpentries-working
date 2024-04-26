@@ -3,19 +3,6 @@ title: Impact
 layout: no-sidebar
 date: 2018-01-30T14:45:08+00:00
 lastmod: 2022-12-11T14:45:08+00:00
-nav:
-- name: About us
-  url: /about-us
-- name: Our impact
-  url: /about-us/impact
-- name: Our funding
-  url: /
-- name: Our team
-  url: /
-- name: Our community
-  url: /
-- name: Contact us
-  url: /
 widgets:
 - newsletter
 - sponsors
