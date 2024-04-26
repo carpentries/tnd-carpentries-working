@@ -4,3 +4,82 @@ import Alpine from 'alpinejs'
 window.Alpine = Alpine
 
 Alpine.start()
+
+const wrapper = document.querySelector('.h2-wrap')
+const h2Elements = document.querySelectorAll('.h2-wrap > h2');
+const proseReady = new CustomEvent("proseReady", {});
+
+window.addEventListener('DOMContentLoaded', (event) => {
+  if(wrapper) {
+    // Iterate over each h2 element
+    h2Elements.forEach((h2, index) => {
+      // Create a parent element for the current h2
+      const parentElement = document.createElement('div');
+      parentElement.classList.add('wrap')
+      parentElement.style.paddingTop = '1px'
+      parentElement.id = h2.getAttribute('id')
+
+      const newH2 = document.createElement('h2')
+      newH2.innerHTML = h2.innerHTML
+
+      parentElement.appendChild(newH2)
+      // Move the siblings of h2 into the parent element
+      let nextSibling = h2.nextElementSibling;
+      let childNumber = 0
+      while (nextSibling && nextSibling.tagName !== 'H2') {
+          childNumber++
+          // Store reference to the next sibling before moving it
+          let currentSibling = nextSibling.nextElementSibling;
+
+          // Move the sibling into the parent element
+          if(nextSibling) {
+            parentElement.appendChild(nextSibling);
+          }
+          // Update nextSibling to the sibling after the one just moved
+          nextSibling = currentSibling;
+      }
+      // Find the next h2 element
+      let nextH2 = h2.nextElementSibling;
+      while (nextH2 && nextH2.tagName !== 'H2') {
+          nextH2 = nextH2.nextElementSibling;
+      }
+      // Insert the parent element before the next h2 element
+      if (nextH2) {
+        nextH2.parentNode.insertBefore(parentElement, nextH2);
+      } else {
+          // If there is no next h2 element, append the parent element to the body
+          wrapper.appendChild(parentElement);
+      }
+      h2.remove()
+    });
+    dispatchEvent(new Event('proseReady'))
+  }
+})
+
+window.addEventListener("proseReady", e => {
+  console.log('Wrappers added...')
+  const observerOptions = {
+    rootMargin: "0px",
+  }
+  const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      const id = entry.target.getAttribute('id');
+      const navItem = document.querySelector(`#TableOfContents li a[href="#${id}"]`).parentElement
+      console.log(id, entry.intersectionRatio)
+      clearActiveStatesInTableOfContents()
+      if (entry.intersectionRatio > 0) {
+        navItem.classList.add('active');
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.wrap').forEach((section) => {
+    observerForTableOfContentActiveState.observe(section);
+  });
+});
+
+function clearActiveStatesInTableOfContents() {
+  document.querySelectorAll('#TableOfContents li').forEach((section) => {
+    section.classList.remove('active');
+  });
+}
