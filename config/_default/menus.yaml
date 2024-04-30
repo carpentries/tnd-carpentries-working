@@ -1,3 +1,4 @@
+# Top menu for Carpentries & Lesson Programs
 top:
   - name: The Carpentries
     url: /
@@ -11,6 +12,7 @@ top:
   - name: Library Carpentry
     url: https://librarycarpentry.org/
     weight: 40
+# About page tabbed menu 
 about:
 - name: About us
   pageRef: /about-us
@@ -30,6 +32,7 @@ about:
 - name: Contact us
   pageRef: /about-us/contact
   weight: 60
+# Workshops page tabbed menu
 workshops:
 - name: Workshops
   pageRef: /workshops
@@ -46,30 +49,28 @@ workshops:
 - name: Upcoming workshops
   pageRef: /workshops/upcoming-workshops
   weight: 50
+
+# Main menu 
 main:
+# Main menu: About 
 - identifier: about-us
   name: About us
-  url: "#"
+  url: "/about-us/"
   parent: null
   weight: 10
 - identifier: about-the-carpentries
-  name: About The Carpentries
+  name: The Carpentries
   pageRef: "/about-us/"
   parent: about-us
-  weight: 10
-- identifier: governance
-  name: Governance
-  pageRef: "governance"
-  parent: about-us
   weight: 20
-- identifier: values
-  name: Values
-  pageRef: "/about-us/values/"
-  parent: about-us
-  weight: 30
 - identifier: impact
   name: Impact
   pageRef: "/about-us/impact/"
+  parent: about-us
+  weight: 30
+- identifier: governance
+  name: Governance
+  pageRef: "/about-us/governance/"
   parent: about-us
   weight: 40
 - identifier: team
@@ -97,6 +98,7 @@ main:
   pageRef: "/about-us/contact-us/"
   parent: about-us
   weight: 90
+# Learn Menu 
 - identifier: learn
   name: Learn
   url: "#"
@@ -127,6 +129,7 @@ main:
   pageRef: "/lesson-development/"
   parent: learn
   weight: 50
+# Volunteer menu
 - identifier: volunteer
   name: Volunteer
   url: "#"
@@ -144,19 +147,15 @@ main:
   weight: 20
 - identifier: handbook
   name: Handbook
-  url: "#"
+  url: "https://docs.carpentries.org/"
   parent: volunteer
   weight: 30
-- identifier: newsletter
-  name: Newsletter
-  url: "#"
-  parent: volunteer
-  weight: 40
 - identifier: amy
   name: AMY
-  url: "#"
+  url: "https://amy.carpentries.org/"
   parent: volunteer
   weight: 50
+# Host menu
 - identifier: host
   name: Host
   url: "#"
@@ -177,6 +176,7 @@ main:
   url: "#"
   parent: host
   weight: 30
+# Support Menu
 - identifier: support
   name: Support
   url: "#"
@@ -187,24 +187,39 @@ main:
   url: "#"
   parent: support
   weight: 10
-- identifier: donate
-  name: Donate
-  url: "#"
-  parent: support
-  weight: 20
 - identifier: sponsorship
   name: Sponsorship
   url: "#"
   parent: support
-  weight: 30
-- identifier: blog
-  name: Blog
-  pageRef: "/blog/"
-  parent: null
-  weight: 60
-- identifier: donate-btn
+  weight: 20
+- identifier: donate
   name: Donate
   url: "#"
-  params:
-    style: button
-  weight: 70
+  parent: support
+  weight: 30
+# Communications menu
+- identifier: communications
+  name: Communications
+  url: "#"
+  parent: null
+  weight: 60
+- identifier: blog
+  name: Blog
+  url: "/blog/"
+  parent: communications
+  weight: 10
+- identifier: newsletter
+  name: Newsletter
+  pageRef: "/newsletter/"
+  parent: communications
+  weight: 20
+- identifier: mastodon
+  name: Mastodon
+  url: "https://hachyderm.io/@thecarpentries"
+  parent: communications
+  weight: 30
+- identifier: linkedin
+  name: Linkedin
+  url: "https://www.linkedin.com/company/the-carpentries/"
+  parent: communications
+  weight: 40
