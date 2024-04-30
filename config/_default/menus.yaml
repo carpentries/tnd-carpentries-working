@@ -17,21 +17,24 @@ about:
 - name: About us
   pageRef: /about-us
   weight: 10
-- name: Our impact
+- name: Impact
   pageRef: /about-us/impact
   weight: 20
-- name: Our funding
-  pageRef: /about-us/funding
+- name: Governance
+  pageRef: /about-us/governance
   weight: 30
 - name: Our team
   pageRef: /about-us/team
   weight: 40
-- name: Our community
-  pageRef: /about-us/community
+- name: Financials
+  pageRef: /about-us/financials
   weight: 50
+- name: Publications
+  pageRef: /about-us/publications
+  weight: 60
 - name: Contact us
   pageRef: /about-us/contact
-  weight: 60
+  weight: 70
 # Workshops page tabbed menu
 workshops:
 - name: Workshops
