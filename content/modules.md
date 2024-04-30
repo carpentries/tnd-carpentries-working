@@ -215,13 +215,24 @@ We help people build knowledge by creating a conducive environment for the excha
   {{< /card >}}
 {{< /grid >}}
 
+## Feed Value
+
+Allow to retrieve the value of a key from a feed.
+If ommited the feed parameter will default to `https://feeds.carpentries.org/badges_stats.json` and can be omitted.
+
+```
+We have {{</* feed_value key="n_instructors" feed="https://feeds.carpentries.org/badges_stats.json" */>}} instructors!
+```
+
+We have {{< feed_value key="n_instructors" >}} instructors!
+
 ## Blobs
 
 {{% code/wrap %}}
 ```markdown
 {{</* grid cols=4 gap=4 */>}}
   {{</* stat */>}}
-    More than **3,000** volunteers
+    More than **{{</* feed_value key="n_instructors" */>}}** volunteers
   {{</* /stat */>}}
   {{</* stat */>}}
     About **8,000** learners
@@ -233,10 +244,10 @@ We help people build knowledge by creating a conducive environment for the excha
 
 {{< grid cols=4 gap=4 >}}
   {{< stat >}}
-    More than **3,000** volunteers
+    More than **{{< feed_value key="n_instructors" >}}** volunteers
   {{< /stat >}}
   {{< stat >}}
-    About **8,000** learners
+    About **8,000** maintainers
   {{< /stat >}}
   {{< stat >}}
     More than **150** countries
