@@ -47,6 +47,10 @@ blocks:
       image: ethan-white.png
       name: Ethan White 🇺🇸
       copy: Professor, Ecology
+    - quote: Dessert cookie candy canes danish halvah. Pudding tootsie roll donut biscuit chocolate sweet roll.
+      image: ethan-white.png
+      name: Ethan White 🇺🇸
+      copy: Chocolatier and Purveyor of Sweets
 
 - layout: 2-col-image-text
   image: fifty-fifty-background.jpg
