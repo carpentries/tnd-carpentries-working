@@ -26,15 +26,18 @@
     {{- $where = . -}}
   {{- end -}}
 {{- end -}}
-{{ with partial "func/GetPersons" (dict "endpoint" $endpoint "where" $where) }}
-  <div class="mt-16 not-prose grid grid-cols-4 gap-16">
+{{ with partial "func/GetPersons" (dict "endpoint" $endpoint "where" $where ) }}
+{{ $persons := . }}
+  <div class="{{ if lt (len $persons) 4 }}flex flex-wrap space-y-16 md:space-y-0 md:space-x-16 justify-center{{ else }} grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 {{ end}} mt-16 not-prose">
     {{ range $person := uniq . }}
-      <div>
+      <div class="text-center {{ if lt (len $persons) 4 }}w-full md:w-auto{{ end }}">
         {{ with .image }}
-        <img class="rounded-full w-full mb-3" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
+        <div class="relative">
+          <img class="h-40 w-40 mx-auto rounded-full object-cover object-[60%_0px]" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
+        </div>
         {{ end }}
         <div class="text-center">
-          <h3 class="uppercase font-bold text-center">{{ .name | default "No Name" }}</h3>
+          <h3 class="font-bold text-center uppercase">{{ .name | default "No Name" }}</h3>
           {{ with .position }}
             {{ . }}
           {{ end }}
@@ -46,7 +49,7 @@
           {{ end }}
         </div>
         {{ with .urls }}
-          <ul class="my-4 flex items-center justify-center">
+          <ul class="flex flex-wrap items-center justify-center my-4">
             {{ range . }}
               <li class="mx-2">
                 <a href="{{ .url }}">{{ with .icon }}<span class="inline-block w-6 fill-slate-400">{{ .Content | safeHTML }}</span>{{ end }}<span class="sr-only">{{ .service }}</span></a>
@@ -56,7 +59,7 @@
         {{ end }}
         {{ with $country := .country }}
           {{ with .image }}
-            <img width="64" class="mt-4 block mx-auto" src="{{ . }}" alt="{{ $country.code }}" title="{{ $country.code }}">
+            <img width="64" class="block mx-auto mt-4" src="{{ . }}" alt="{{ $country.code }}" title="{{ $country.code }}">
           {{ end }}
         {{ end }}
       </div>
