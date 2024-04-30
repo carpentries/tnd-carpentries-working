@@ -1,11 +1,10 @@
 description: The Carpentries is a fiscally sponsored project of Community Initiatives, a registered 501(c)3 non-profit organisation based in California, USA. We are a global community teaching foundational computational and data science skills to researchers in academia, industry and government.
 images:
 - thearpentries-opengraph.png
-social:
-  facebook_admin: jsmith
 title: The Carpentries
 
 git_repo: https://github.com/carpentries/tnd-carpentries-working
+handbook_url: https://docs.carpentries.org
 
 # General email addresses
 
@@ -15,7 +14,7 @@ workshops_email: workshops@carpentrires.org
 instructor_training_email: instructor.training@carpentries.org
 coc_email: coc@carpentries.org
 
-# Social media platformss
+# Social media platforms
 
 youtube: https://www.youtube.com/thecarpentries
 mastodon: https://hachyderm.io/@thecarpentries
