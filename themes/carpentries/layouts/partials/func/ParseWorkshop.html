@@ -107,18 +107,18 @@
   {{/* For meeting, we use the same source */}}
 
   {{/* Meeing is In Person if... */}}
-  {{ if in $tags "in-person" }}
-    {{ $s.SetInMap "data" "meeting" (dict
-      "key" "in-person"
-      "name" "In Person"
-      "image" "/In-Person.svg"
-    ) }}
-  {{/* Else, Meeting is Online */}}
-  {{ else if in $tags "online" }}
+  {{ if in $tags "online" }}
     {{ $s.SetInMap "data" "meeting" (dict
       "key" "online"
       "name" "Online"
       "image" "/Online.svg"
+    ) }}
+  {{/* Else, Meeting is Online */}}
+  {{ else }}
+    {{ $s.SetInMap "data" "meeting" (dict
+      "key" "in-person"
+      "name" "In Person"
+      "image" "/In-Person.svg"
     ) }}
   {{ end }}
 {{ end }}
