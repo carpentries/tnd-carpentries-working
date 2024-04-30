@@ -31,7 +31,9 @@
     {{ range $person := uniq . }}
       <div>
         {{ with .image }}
-        <img class="w-full mb-3 rounded-full" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
+        <div class="relative">
+          <img class="h-40 w-40 rounded-full object-cover object-[59%_-4px]" src="{{ . }}" alt="{{ with $person.image_alt }}{{ . }}{{ end }}">
+        </div>
         {{ end }}
         <div class="text-center">
           <h3 class="font-bold text-center uppercase">{{ .name | default "No Name" }}</h3>
