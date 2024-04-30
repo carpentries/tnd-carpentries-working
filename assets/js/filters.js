@@ -21,16 +21,16 @@ document.addEventListener(documentLoad, function() {
   const filterSelects = document.querySelectorAll('select[name]')
   const filterClear = document.getElementById('clear-filters')
   const filtersStart = {
-    country: [],
-    delivery: [],
-    curriculum: []
+    country: "",
+    delivery: "",
+    curriculum: ""
   }
   let filters = filtersStart
   filterClear.addEventListener("click", () => {
     filters = {
-      country: [],
-      delivery: [],
-      curriculum: []
+      country: "",
+      delivery: "",
+      curriculum: ""
     }
     searchInput.value = ""
     filterSelects.forEach(select => {
@@ -45,9 +45,13 @@ document.addEventListener(documentLoad, function() {
 
     select.addEventListener("change", function() {
       if(!filters[filterKey].includes(this.value)) {
-        filters[filterKey].push(this.value)
+        filters[filterKey] = ""
+        filters[filterKey] = this.value
         userList.filter((item) => {
-          return filters[filterKey].includes(item.values()[filterKey])
+          const country = !!filters.country ? filters.country == item.values().country : true
+          const delivery = !!filters.delivery ? filters.delivery == item.values().delivery : true
+          const curriculum = !!filters.curriculum ? filters.curriculum == item.values().curriculum : true
+          return country && delivery && curriculum
         })
       }
     })
