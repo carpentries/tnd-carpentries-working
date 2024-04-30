@@ -43,6 +43,11 @@ blocks:
       image: ethan-white.png
       name: Ethan White 🇺🇸
       copy: Associate Professor and Moore Investigator in the Department of Wildlife Ecology and Conservation and the Informatics Institute at the University of Florida
+    - quote: This is another quote. Carpentries workshops are awewsome!
+      image: ethan-white.png
+      name: Ethan White 🇺🇸
+      copy: Professor, Ecology
+
 - layout: 2-col-image-text
   image: fifty-fifty-background.jpg
   title: Subscribe to our newsletter
