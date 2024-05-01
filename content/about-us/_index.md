@@ -128,6 +128,25 @@ The Carpentries administration and other essential operations are held together 
 
 The Carpentries has three official lesson programs, each providing lessons catered to a specific audience or purpose. Our workshops may focus on lessons from one set of curricula or mix and match lesson's to provide the audience with an experience catered to their needs.
 
+
+
+<table>
+<tr>
+<td><img src="https://carpentries.org/images/logos/dc.svg"></td>
+<td><img src="https://carpentries.org/images/logos/lc.svg"></td>
+<td><img src="https://carpentries.org/images/logos/swc.svg"></td>
+</tr>
+
+<tr>
+<td>Data Carpentry lessons are domain-specific (include examples from their type of work). Learn how to use code to work more effectively and reproducibly with data with lessons based in Astronomy, Ecology, Genomics, Image Processing and Social Sciences.</td>
+<td>Library Carpentry lessons are domain-agnostic, and teach OpenRefine, Git, SQL, R, Python, and more. Exercises include datasets that will be familiar to librarians.</td>
+<td>Software Carpentry lessons are domain-agnostic, and teach the Unix shell, coding in R or Python, and version control using Git. Exercises are generic and for anyone wanting to be more comfortable with coding.
+</td>
+</tr>
+
+</table>
+
+
 ## Our History
 
 We have a rich history that dates back to 1998 when Software Carpentry was founded with the mission of teaching lab skills for research computing. At that time, Greg Wilson and Brent Gorda taught workshops to teach researchers software development skills. Greg continued this work, building a collection of collaboratively-developed and openly-available lessons, as well as community of instructors who used those lessons to teach workshops.
