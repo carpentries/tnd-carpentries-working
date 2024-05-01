@@ -109,7 +109,7 @@ main:
   weight: 20
 - identifier: lessons
   name: Lessons
-  pageRef: "#"
+  pageRef: "/lessons/"
   parent: learn
   weight: 10
 - identifier: workshops
