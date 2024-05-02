@@ -5,10 +5,37 @@ cascade:
   nav: workshops
 ---
 
-
-## Carpentries workshops
-
 * Current workshops page: https://carpentries.org/workshops/
+
+
+## Why The Carpentries workshops
+
+
+
+
+{{< table features >}}
+<table>
+    <tr>
+        <td>Has Feature</td>
+        <td><b>No previous experience needed.</b> Our workshops target novice learners with little to no prior experience. </td>
+    </tr>
+    <tr>
+        <td>Has Feature</td>
+        <td><b>Live Coding and Hands-On.</b> You'll code alongside the instructor and more blah blah blah about live coding things at the workshop. </td>
+    </tr>
+    <tr>
+        <td>Has Feature</td>
+        <td><b>Inclusive community of practice.</b> Cotton candy pastry tart macaroon shortbread gingerbread gummies chocolate bar. Cookie cotton candy chocolate cake soufflé bonbon biscuit cake.</td>
+    </tr>
+    <tr>
+        <td>Has Feature</td>
+        <td><b>Broad scope of lessons. </b>  We offer a variety of lessons serving various discplines from librarians to astronomers.</td>
+    </tr>    
+
+</table>
+{{< /table >}}
+
+
 
 ## Organizing a workshop
 
