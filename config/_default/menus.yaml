@@ -40,19 +40,12 @@ workshops:
 - name: Workshops
   pageRef: /workshops
   weight: 10
-- name: Request a workshop
-  pageRef: /workshops/request-workshop
-  weight: 20
 - name: Workshops FAQ
   pageRef: /workshops/workshops-faq
   weight: 30
-- name: Browse lessons
-  url: /#
-  weight: 40
 - name: Upcoming workshops
   pageRef: /workshops/upcoming-workshops
   weight: 50
-
 # Main menu 
 main:
 # Main menu: About 
