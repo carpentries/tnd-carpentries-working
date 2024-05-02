@@ -70,6 +70,10 @@ html, body{
   background-color: #f2f2f2; /* or any other shade of gray you prefer */
 }
 
+.sidebar #TableOfContents ul li ul {
+  @apply hidden;
+}
+
 p.button a,
 .btn-blue
 {
