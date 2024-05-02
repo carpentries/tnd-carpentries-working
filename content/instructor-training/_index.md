@@ -82,4 +82,4 @@ By attending a Carpentries Workshop, you are joining a community of instructors,
 
 ## Contact Us
 
-Have Questions? Please consult our [Instructor Training FAQ](#) or contact the Instructor Training Team. Our Team is ready to answer any additional questions you may have. To reach us, or to find out more, please send us an email to {{< param instructor_training_email >}}.
+Have Questions? Please consult our [Instructor Training FAQ](/instructor-training/instructor-training-faq) or contact the Instructor Training Team. Our Team is ready to answer any additional questions you may have. To reach us, or to find out more, please send us an email to {{< param instructor_training_email >}}.
