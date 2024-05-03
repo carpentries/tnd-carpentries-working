@@ -46,4 +46,22 @@ Once invoicing is complete you can expect to:
 1. **Register for Instructor Training:** Your trainees may register for any event that suits their schedule(s), either as a group or individually.
 1. **Complete Training & Certification:** After the training, Trainees can become Certified Carpentries Instructors by completing 3 checkout steps: Attend a discussion session where they can ask questions about teaching and learn from other instructors; Complete a teaching demonstration, which is a group practice session where trainees will demonstrate 5-minutes of teaching and receive feedback; and contribute to a Carpentries Lesson.
 
+## Test accordion
 
+Below is the same content as above, with accordion style just to test out this styling.
+
+{{< accordion title="Receive A Registration Code" >}}
+Our Instructor Training team will set up and share a registration code for your trainees. This code can be used to unlock priority registration in Instructor Training events.
+{{< /accordion >}}
+
+{{< accordion title="Share Code With Trainees" >}}
+We provide you with an email template so that you can share the code widely with folks in your organisation, or you can identify people of interest and share the code with that select group of trainees.
+{{< /accordion >}}
+
+{{< accordion title="Register for Instructor Training" >}}
+Your trainees may register for any event that suits their schedule(s), either as a group or individually.
+{{< /accordion >}}
+
+{{< accordion title="Complete Training & Certification" >}}
+After the training, Trainees can become Certified Carpentries Instructors by completing 3 checkout steps: Attend a discussion session where they can ask questions about teaching and learn from other instructors; Complete a teaching demonstration, which is a group practice session where trainees will demonstrate 5-minutes of teaching and receive feedback; and contribute to a Carpentries Lesson.
+{{< /accordion >}}
