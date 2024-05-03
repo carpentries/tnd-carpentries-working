@@ -186,17 +186,17 @@ main:
   weight: 40
 - identifier: host-a-workshop
   name: Host a workshop
-  pageRef: "/workshops/request-workshop/"
+  pageRef: "/host/host-workshop/"
   parent: host
   weight: 10
 - identifier: host-a-training
   name: Host a training
-  url: "#"
+  url: "/host/host-training/"
   parent: host
   weight: 20
 - identifier: pricing
   name: Pricing
-  url: "#"
+  url: "/host/pricing/"
   parent: host
   weight: 30
 # Support Menu
