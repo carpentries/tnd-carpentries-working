@@ -1,45 +1,11 @@
-{{ $authors := slice }}
-{{ with .Params.authors }}
-  {{ range . }}
-    {{ with site.GetPage (printf "/persons/%s.md") . }}
-      {{ $authors = $authors | append (dict "name" .Title "image" .Params.image) }}
-    {{ else }}
-      {{ $authors = $authors | append (dict "name" .) }}
-    {{ end }}
-  {{ end }}
 
-{{ end }}
 <div class="p-8 mb-5 border">
-  <div class="flex mb-4">
-    {{ with $authors }}
-      {{ range $author := . }}
-      <div class="flex items-center uppercase text-[0.625rem]">
-        {{ with .image }}
-          {{ with resources.Get . }}
-            <img class="w-6 mr-1 rounded-full border border-red-500" src="{{ .RelPermalink }}" alt="Image for {{ $author.name }}">
-          {{ end }}
-        {{ end }}
-        <span>{{ .name }}</span>
-      </div>
-      {{ end }}
-    {{ end }}
-  </div>
+  {{ .Render "by-line" }}
   <h3 class="text-base md:text-[1.75rem] leading-[2.125rem] font-semibold">
     <a class="underline hover:text-blue-hover text-gray-dark" href="{{ .RelPermalink }}">{{ .Title }}</a>
   </h3>
   {{ with .Params.teaser }}
       <div class="mb-5 text-lg font-semibold text-gray-mid">{{ . }}</div>
   {{ end }}
-  <div class="flex items-center -mx-2">
-    {{ with .Date }}
-      <time datetime="{{ . }}" class="mx-2 text-sm font-semibold text-gray-mid">{{ .Format "Jan 2, 2006" }}</time>
-    {{ end }}
-    {{ with .GetTerms "tags" }}
-      {{ range . }}
-        <a class="px-2 py-1 mx-2 text-xs text-white rounded-full bg-gray-mid" href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ end }}
-    {{ end }}
-  </div>
-
-
+  {{ .Render "metas" }}
 </div>
