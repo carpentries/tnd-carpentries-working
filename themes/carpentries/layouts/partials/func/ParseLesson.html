@@ -77,8 +77,6 @@
         {{ $s.SetInMap "filters" $key $output }}
       {{ end }}
     {{ end }}
-  {{ else if eq $key "name" }}
-    {{ $s.SetInMap "data" "title" $value }}
   {{ else }}
     {{ $s.SetInMap "data" $key $value }}
   {{ end }}
