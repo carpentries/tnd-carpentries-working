@@ -1,6 +1,8 @@
 ---
 title: Trainer Training
 layout: single
+cascade:
+  nav: trainer-training
 ---
 
 ## Trainer Training
