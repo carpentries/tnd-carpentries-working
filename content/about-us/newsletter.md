@@ -1,6 +1,8 @@
 ---
 title: Newsletter
 layout: no-sidebar
+aliases:
+- /newsletter
 ---
 
 
