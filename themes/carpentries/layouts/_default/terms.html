@@ -1,7 +1,12 @@
 {{ define "main" }}
   <div class="container px-5 mx-auto">
     {{ partial "breadcrumbs" . }}
-    <h1 class="text-[2rem] leading-[2.8125rem] font-semibold mb-6">{{ .Title }}</h1>
+    <div class="mb-12">
+      <h1 class="text-[2rem] leading-[2.8125rem] font-semibold">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+        <h2 class="text-xl mt-2"> {{ . }}</h2>
+      {{ end }}
+    </div>
     <div class="relative grid gap-8 md:grid-cols-12">
       <div class="col-span-8 pb-16 pro">
         {{ range .Pages.ByTitle }}
@@ -24,7 +29,9 @@
       </div>
       <div class="relative col-span-4">
         <div class="">
+
           <div class="prose">
+            <h3>List of {{ .Data.Plural }}</h3>
             <ul>
               {{ range .Data.Terms.Alphabetical }}
               <li>
