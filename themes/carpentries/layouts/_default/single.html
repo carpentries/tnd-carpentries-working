@@ -3,13 +3,15 @@
     {{ partial "breadcrumbs" . }}
     <div class="mb-8">
       <h1 class="text-[2rem] leading-[2.8125rem] font-semibold">{{ .Title }}</h1>
+      {{ if eq .Type "post" }}
       <div class="mt-4">
         {{ .Render "by-line-inline" }} · {{ .Render "date" }}
         <div>
           {{ .Render "tags" }}
         </div>
       </div>
-      </div>
+      {{ end }}
+    </div>
     <div class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
       <div class="pb-16 md:col-span-9 md:pr-20">
         <div class="prose max-w-none">
@@ -22,7 +24,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
 {{ end }}

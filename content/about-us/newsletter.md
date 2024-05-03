@@ -1,12 +1,19 @@
 ---
 title: Newsletter
-layout: single
+layout: no-sidebar
 ---
 
-See our [newsletter archive](#archive)
 
-{{< mc_newsletter_form >}}
 
-## Archive
+{{< grid cols=12 gap=4 >}}
+  {{< slot span=8 >}}
+    See our [newsletter archive](#archive)
+    {{< mc_newsletter_form >}}
+  {{</ slot >}}
 
-{{< newsletter_archive >}}
+  {{< slot span=4 >}}
+  ## Archive
+
+  {{< newsletter_archive >}}
+  {{</ slot >}}
+{{< /grid >}}

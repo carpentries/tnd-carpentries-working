@@ -4,7 +4,7 @@ title: Modules
 
 ## Image
 
-{{% code/wrap %}}
+{{% code/wrap open %}}
 ```markdown
 ![Alternate Text](/images/cc-za.png "Image Description")
 ```
@@ -14,7 +14,7 @@ title: Modules
 
 ## Copy with a button
 
-{{% code/wrap %}}
+{{% code/wrap open %}}
 ```markdown
 The Carpentries Sponsorship Program aims to help The Carpentries partner with like-minded organisations who want to contribute financially to help The Carpentries achieve our mission and vision.
 
@@ -34,7 +34,7 @@ With support from sponsors, The Carpentries will continue our efforts to make co
 
 ### Default Table
 
-{{% code/wrap %}}
+{{% code/wrap open %}}
 ```markdown
 | Fruit    | Color  | Taste     | Price (per pound) |
 |----------|--------|-----------|-------------------|
@@ -120,7 +120,7 @@ With support from sponsors, The Carpentries will continue our efforts to make co
 ## Copy with badges
 
 
-{{% code/wrap %}}
+{{% code/wrap open %}}
 ```markdown
 - Empowerment
 - Champion
@@ -150,7 +150,7 @@ The Carpentries provides a digital icon that can be displayed on sponsor’s web
 
 ## Text and Icons
 
-{{% code/wrap %}}
+{{% code/wrap open %}}
 ```markdown
 {{</* section title="Act Openly" image="/images/act_openly.png" */>}}
 We believe that transparency, honesty, and fairness are keys to fostering trust within an open community.
@@ -166,7 +166,71 @@ We believe that transparency, honesty, and fairness are keys to fostering trust 
 We help people build knowledge by creating a conducive environment for the exchange of skills, perspectives and experiences that empower people and enable them to reach their potential.
 {{< /section>}}
 
+## Grid
+{{% code/wrap open %}}
+```
+{{</* grid cols=12 gap=4 */>}}
+  {{</* slot span=7 */>}}
+    ### An image on the left of a 12 columns grid
+    ![Alternate Text](/images/cc-za.png "Spanning 7 columns")
+  {{</*/ slot */>}}
+
+  {{</* slot span=5 */>}}
+    ### An image on the right of a 12 columns grid
+    ![Alternate Text](/images/cc-za.png "Spanning 5 columns")
+  {{</*/ slot */>}}
+{{</* /grid */>}}
+```
+{{% /code/wrap %}}
+
+{{< grid cols=12 gap=4 >}}
+  {{< slot span=7 >}}
+    ### An image on the left of a 12 columns grid
+    ![Alternate Text](/images/cc-za.png "Spanning 7 columns")
+  {{</ slot >}}
+
+  {{< slot span=5 >}}
+    ### An image on the right of a 12 columns grid
+    ![Alternate Text](/images/cc-za.png "Spanning 5 columns")
+  {{</ slot >}}
+{{< /grid >}}
+
+## Blobs
+
+Using the grid above and `stat`
+
+{{% code/wrap %}}
+```markdown
+{{</* grid cols=4 gap=4 */>}}
+  {{</* stat */>}}
+    More than **{{</* feed_value key="n_instructors" */>}}** volunteers
+  {{</* /stat */>}}
+  {{</* stat */>}}
+    About **8,000** learners
+  {{</* /stat */>}}
+  [...]
+{{</* /grid */>}}
+```
+{{% /code/wrap %}}
+
+{{< grid cols=4 gap=4 >}}
+  {{< stat >}}
+    More than **{{< feed_value key="n_instructors" >}}** volunteers
+  {{< /stat >}}
+  {{< stat >}}
+    About **8,000** maintainers
+  {{< /stat >}}
+  {{< stat >}}
+    More than **150** countries
+  {{< /stat >}}
+  {{< stat >}}
+   And a **4th** stat
+  {{< /stat >}}
+{{< /grid >}}
+
 ## Cards
+
+Using the grid above and `card`
 
 {{% code/wrap %}}
 ```markdown
@@ -220,51 +284,26 @@ We help people build knowledge by creating a conducive environment for the excha
 Allow to retrieve the value of a key from a feed.
 If ommited the feed parameter will default to `https://feeds.carpentries.org/badges_stats.json` and can be omitted.
 
+{{% code/wrap open %}}
 ```
 We have {{</* feed_value key="n_instructors" feed="https://feeds.carpentries.org/badges_stats.json" */>}} instructors!
 ```
-
-We have {{< feed_value key="n_instructors" >}} instructors!
-
-## Blobs
-
-{{% code/wrap %}}
-```markdown
-{{</* grid cols=4 gap=4 */>}}
-  {{</* stat */>}}
-    More than **{{</* feed_value key="n_instructors" */>}}** volunteers
-  {{</* /stat */>}}
-  {{</* stat */>}}
-    About **8,000** learners
-  {{</* /stat */>}}
-  [...]
-{{</* /grid */>}}
-```
 {{% /code/wrap %}}
 
-{{< grid cols=4 gap=4 >}}
-  {{< stat >}}
-    More than **{{< feed_value key="n_instructors" >}}** volunteers
-  {{< /stat >}}
-  {{< stat >}}
-    About **8,000** maintainers
-  {{< /stat >}}
-  {{< stat >}}
-    More than **150** countries
-  {{< /stat >}}
-  {{< stat >}}
-   And a **4th** stat
-  {{< /stat >}}
-{{< /grid >}}
+**We have {{< feed_value key="n_instructors" >}} instructors!**
+
+
 
 ## Persons
 
 ### From a data file
 Persons from the `/data/governance.people/` data file where the `active` and `advisory` key are `true`
 
+{{% code/wrap open %}}
 ```markdown
 {{</* persons feed="governance.people" where="active,true | advisory,true" */>}}
 ```
+{{% /code/wrap %}}
 
 {{< persons feed="governance.people" where="active,true | advisory,true" >}}
 
@@ -272,24 +311,28 @@ Persons from the `/data/governance.people/` data file where the `active` and `ad
 
 Persons from the `https://feeds.carpentries.org/all_badged_people.json` feed where `is_trainer` is true and `country`is `NZ`
 
+{{% code/wrap open %}}
 ```markdown
 {{</* persons feed="https://feeds.carpentries.org/all_badged_people.json" where="is_trainer,true | country,NZ" */>}}
 ```
+{{% /code/wrap %}}
 {{< persons feed="https://feeds.carpentries.org/all_badged_people.json" where="is_trainer,true | country,NZ" >}}
 
 ## Committees
 
 To list committees and their members as set through the `data/governance.committees` file.
 
+{{% code/wrap open %}}
 ```markdown
 {{</* committees */>}}
 ```
+{{% /code/wrap %}}
 
 {{< committees >}}
 
 ## Accordions
 
-{{% code/wrap %}}
+{{% code/wrap open %}}
 ```markdown
 {{</* accordion title="What happens if I need to cancel or postpone a planned workshop?" */>}}
 If you need to cancel your workshop, please be sure to inform your [Regional Coordinator](https://carpentries.org/regionalcoordinators/). They will ensure that the workshop is removed from our website and complete any other administrative tasks associated with the workshop.

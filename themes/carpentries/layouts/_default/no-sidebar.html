@@ -1,4 +1,5 @@
 {{ define "main" }}
+{{ $hasGrid := $.HasShortcode "grid" }}
   <div class="container px-5 mx-auto">
     {{ partial "breadcrumbs" . }}
 
@@ -6,7 +7,7 @@
 
     {{ partial "subnav" . }}
     <div class="pb-16">
-        <div class="max-w-4xl prose">
+        <div class="{{ cond $hasGrid "max-w-none" "max-w-4xl"}} prose">
           {{ .Content }}
         </div>
     </div>
