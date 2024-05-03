@@ -4,7 +4,24 @@
 
   @author @regisphilibert
 
-  @context Map (.)
+  @context Example
+  ```json
+  {
+    "instructors": "Daniel Chavez",
+    "end_date": "2024-06-17",
+    "url": "https://dechavezv.github.io/2024-03-25-puce/",
+    "administrator_id": 343,
+    "curriculum": "mix-and-match",
+    "venue": "Pontificia Universidad Católica del Ecuador",
+    "longitude": -78.490922,
+    "slug": "2024-03-25-puce",
+    "tag_name": "automated-email,Circuits",
+    "helpers": null,
+    "host_name": "Pontifical Catholic University of Ecuador",
+    "country": "EC",
+    "latitude": -0.210843,
+    "start_date": "2024-03-25"
+  }
 
   @access private
 
@@ -14,9 +31,13 @@
     String (.start_date)
     String (.end_date)
     String (.string_date)
-    Slice of Strings (.instructors)
-    Slice of Strings (.helpers)
+    []String (.instructors)
+    []String (.helpers)
     String (.string_date)
+    Map (.filters)
+      String (.country)
+      String (.meeting)
+      String (.curriculum)
     Map (.type)
       String (.key)
       String (.name)
@@ -33,7 +54,7 @@
 
 {{ $s := newScratch }}
 {{ $s.Set "data" dict }}
-
+{{ $s.Set "filters" dict }}
 {{ with .host_name }}
   {{ $s.SetInMap "data" "venue" . }}
 {{ end }}
@@ -157,4 +178,18 @@
   {{ end }}
 {{ end }}
 
+{{ with $s.Get "data"}}
+  {{ with .country }}
+    {{ $s.SetInMap "filters" "country" .name }}
+  {{ end }}
+  {{ with .meeting }}
+    {{ $s.SetInMap "filters" "meeting" .name }}
+  {{ end }}
+  {{ with .curriculum }}
+    {{ $s.SetInMap "filters" "curriculum" .name }}
+  {{ end }}
+{{ end }}
+{{ with $s.Get "filters" }}
+  {{ $s.SetInMap "data" "filters" . }}
+{{ end }}
 {{ return $s.Get "data" }}
