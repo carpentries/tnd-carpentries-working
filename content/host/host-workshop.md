@@ -1,6 +1,8 @@
 ---
 title: Host a Workshop
 layout: single
+cascade:
+  nav: host
 ---
 
 ## Overview

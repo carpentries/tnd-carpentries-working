@@ -1,6 +1,8 @@
 ---
 title: Host a Training
 layout: single
+cascade:
+  nav: host
 ---
 
 ## Overview

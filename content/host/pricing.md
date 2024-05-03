@@ -1,6 +1,8 @@
 ---
 title: Pricing
 layout: single
+cascade:
+  nav: host
 ---
 
 ## Overview
