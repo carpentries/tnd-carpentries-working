@@ -12,6 +12,9 @@ document.addEventListener(documentLoad, function() {
   }
   const valueNames = [
     "title",
+    "description",
+    "instructors",
+    "helpers",
     {data: data.filters.map(f => f.key)},
   ]
   const filtersStart = () => Object.fromEntries(data.filters.map(f => [f.key, ""]))
@@ -49,7 +52,7 @@ document.addEventListener(documentLoad, function() {
         userList.filter((item) => {
           for (const atFilter in filters) {
             if(!!filters[atFilter]) {
-              if(item.values()[atFilter].includes(filters[atFilter])) {
+              if(!!item.values()[atFilter] && item.values()[atFilter].includes(filters[atFilter])) {
                 continue
               } else {
                 return false
