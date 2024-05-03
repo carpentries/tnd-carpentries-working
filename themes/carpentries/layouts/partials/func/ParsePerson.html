@@ -5,6 +5,8 @@
   @author @regisphilibert
 
   @context Example
+  ```json
+  {
     "github": "djinnome",
     "person_name": "Jeremy Zucker",
     "url": "https://linkedin.com/in/jeremyzucker",
@@ -20,7 +22,8 @@
     "is_mentee": false,
     "is_instructor": true,
     "gravatar": "71a6b29325a89b9b9643950bdc32a97c"
-
+  }
+  ```
   @access private
 
   @returns Map
@@ -29,7 +32,7 @@
     String (.term)
     String (.position)
     String (.pronouns)
-    Slice of Map (.urls)
+    []String (.urls)
       - String (.service)
         Resource (.icon)
         String (.url)
