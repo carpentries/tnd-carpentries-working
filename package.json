@@ -3,7 +3,7 @@
     "dependencies": {},
     "devDependencies": {
       "@alpinejs/intersect": "project",
-      "@tailwindcss/forms": "carpentries",
+      "@tailwindcss/forms": "project",
       "@tailwindcss/typography": "project",
       "alpinejs": "project",
       "postcss": "project",

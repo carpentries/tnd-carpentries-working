@@ -3,7 +3,10 @@
     {{ partial "breadcrumbs" . }}
     <h1 class="text-[2rem] leading-[2.8125rem] font-semibold">{{ .Title }}</h1>
     {{ partial "subnav" . }}
-    <div class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
+    <div x-data="{
+      currentSection: 0,
+      currentSectionTitle: 'First'
+    }" class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
       <div class="pb-16 md:col-span-9 md:pr-20">
         <div class="h2-wrap prose max-w-none">
           {{ .Content }}
