@@ -58,7 +58,7 @@ html, body{
   left: 0;
 }
 
-#TableOfContents li.active a:before {
+.sidebar #TableOfContents li.active a:before {
   @apply content-[''] pl-5 bg-[url('/arrow-right-black.svg')] bg-no-repeat;
 }
 
