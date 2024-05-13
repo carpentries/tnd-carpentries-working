@@ -27,6 +27,17 @@ document.addEventListener(documentLoad, function() {
     //pagination: true
   };
   var userList = new List('filter', options);
+  userList.on('updated', (list) => {
+    const feedback = document.getElementById('list-feedback')
+    if(feedback) {
+      if(!list.matchingItems.length) {
+        feedback.style.display = "block"
+      } else {
+        feedback.style.display = "none"
+      }
+    }
+
+  })
   const searchInput = document.querySelector('.search-input')
   const filterSelects = document.querySelectorAll('select[name]')
   const filterClear = document.getElementById('clear-filters')
@@ -48,7 +59,6 @@ document.addEventListener(documentLoad, function() {
       if(!filters[filterKey].includes(this.value)) {
         filters[filterKey] = ""
         filters[filterKey] = this.value
-        console.log(filters)
         userList.filter((item) => {
           for (const atFilter in filters) {
             if(!!filters[atFilter]) {
