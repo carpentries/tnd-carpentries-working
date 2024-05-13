@@ -54,11 +54,11 @@ blocks:
   title: Our supporters
   copy: We are supported by our member organisations, those who sponsor workshops, as well as grants and donations from various sources.
   logos:
-  - moore-logo.svg
-  - alfred-sloan-logo.svg
-  - chan-zuck-logo.svg
-  - r-studio-logo.svg
+  - logo: moore-logo.svg
+  - logo: alfred-sloan-logo.svg
+  - logo: chan-zuck-logo.svg
+  - logo: r-studio-logo.svg
   cta:
     copy: Become a sponsor
-    url: '#'
+    url: '/'
 ---
