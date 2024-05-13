@@ -1,4 +1,4 @@
-posts: /blog/:year/:month/:title/
+posts: /blog/:year/:month/:filename/
 term:
   tags: /blog/tag/:slug/
   authors: /blog/author/:slug
