@@ -4,21 +4,21 @@
     <div class="mb-12">
       <h1 class="text-[2rem] leading-[2.8125rem] font-semibold">{{ .Title }}</h1>
       {{ with .Params.subtitle }}
-        <h2 class="text-xl mt-2"> {{ . }}</h2>
+        <h2 class="mt-2 text-xl"> {{ . }}</h2>
       {{ end }}
     </div>
     <div class="relative grid gap-8 md:grid-cols-12">
       <div class="col-span-8 pb-16 pro">
         {{ range .Pages.ByTitle }}
           <div class="mb-4">
-            <h3 class="text-2xl font-bold mb-2" id="{{ urlize .Title }}"><a class="hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <h3 class="mb-2 text-2xl font-bold" id="{{ urlize .Title }}"><a class="hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ with .Pages }}
             <div class="prose">
               <ul>
                 {{ range . }}
                   <li>
                     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    <p class="not-prose"><time datetime="{{ .Date }}">{{ .Date.Format "2006-02-03" }}</time></p>
+                    <p class="not-prose"><time datetime="{{ .Date }}">{{ .Date.Format "2 April, 2006" }}</time></p>
                   </li>
                 {{ end }}
               </ul>
