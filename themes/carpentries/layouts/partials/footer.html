@@ -1,84 +1,12 @@
 <div class="px-5 py-8 bg-gray-dark text-offwhite">
   <div class="container mx-auto">
-    <div class="grid items-center grid-cols-1 gap-5 md:grid-cols-2">
-      <div>
-        <img alt="The Carpentries" src="/carpentries-logo-footer.svg">
-      </div>
-      <div class="text-xs md:text-sm md:pl-20">
-        The Carpentries is a fiscally sponsored project of Community Initiatives, a registered 501(c)3 non-profit organisation based in California, USA. We are a global community teaching foundational computational and data science skills to researchers in academia, industry and government.
-      </div>
-    </div>
+    {{ partial "footer-branding.html" . }}
   </div>
   <div class="container py-8 mx-auto my-8 border-t border-b border-t-offwhite border-b-offwhite">
-    <div class="grid grid-cols-1 gap-5 md:grid-cols-5 lg:grid-cols-6">
-      <div x-data="{ open: false }">
-        <h4 class="inline-flex mb-2 text-sm md:font-bold md:pointer-events-none relative md:after:content-none after:content-[''] after:bg-[url('/chevron-down-white.svg')] after:bg-no-repeat after:right-[-14px] after:top-[8px] after:w-2 after:h-2 after:absolute"><button x-on:click="open = ! open">About us</button></h4>
-        <ul class="text-sm md:text-xs font-bold md:font-extrabold [&>li]:mb-2 hover:[&>li>a]:underline md:h-auto pl-5 md:pl-0 md:[&>li>a:after]:content-none [&>li>a:after]:content-[''] [&>li>a:after]:bg-[url('/arrow-right-white.svg')] [&>li>a:after]:bg-no-repeat [&>li>a:after]:right-[-14px] [&>li>a:after]:top-[5px] [&>li>a:after]:w-[9px] [&>li>a:after]:h-[9px] [&>li>a:after]:absolute" :class="open ? 'h-auto' : 'h-0 overflow-hidden'">
-          <li><a class="relative" href="#">Link 1</a></li>
-          <li><a class="relative" href="#">Link 2</a></li>
-          <li><a class="relative" href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div x-data="{ open: false }">
-        <h4 class="inline-flex mb-2 text-sm md:font-bold md:pointer-events-none relative md:after:content-none after:content-[''] after:bg-[url('/chevron-down-white.svg')] after:bg-no-repeat after:right-[-14px] after:top-[8px] after:w-2 after:h-2 after:absolute"><button x-on:click="open = ! open">Workshops</button></h4>
-        <ul class="text-sm md:text-xs font-bold md:font-extrabold [&>li]:mb-2 hover:[&>li>a]:underline md:h-auto pl-5 md:pl-0 md:[&>li>a:after]:content-none [&>li>a:after]:content-[''] [&>li>a:after]:bg-[url('/arrow-right-white.svg')] [&>li>a:after]:bg-no-repeat [&>li>a:after]:right-[-14px] [&>li>a:after]:top-[5px] [&>li>a:after]:w-[9px] [&>li>a:after]:h-[9px] [&>li>a:after]:absolute" :class="open ? 'h-auto' : 'h-0 overflow-hidden'">
-          <li><a class="relative" href="#">Link 1</a></li>
-          <li><a class="relative" href="#">Link 2</a></li>
-          <li><a class="relative" href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div x-data="{ open: false }">
-        <h4 class="inline-flex mb-2 text-sm md:font-bold md:pointer-events-none relative md:after:content-none after:content-[''] after:bg-[url('/chevron-down-white.svg')] after:bg-no-repeat after:right-[-14px] after:top-[8px] after:w-2 after:h-2 after:absolute"><button x-on:click="open = ! open">Volunteer</button></h4>
-        <ul class="text-sm md:text-xs font-bold md:font-extrabold [&>li]:mb-2 hover:[&>li>a]:underline md:h-auto pl-5 md:pl-0 md:[&>li>a:after]:content-none [&>li>a:after]:content-[''] [&>li>a:after]:bg-[url('/arrow-right-white.svg')] [&>li>a:after]:bg-no-repeat [&>li>a:after]:right-[-14px] [&>li>a:after]:top-[5px] [&>li>a:after]:w-[9px] [&>li>a:after]:h-[9px] [&>li>a:after]:absolute" :class="open ? 'h-auto' : 'h-0 overflow-hidden'">
-          <li><a class="relative" href="#">Link 1</a></li>
-          <li><a class="relative" href="#">Link 2</a></li>
-          <li><a class="relative" href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div x-data="{ open: false }">
-        <h4 class="inline-flex mb-2 text-sm md:font-bold md:pointer-events-none relative md:after:content-none after:content-[''] after:bg-[url('/chevron-down-white.svg')] after:bg-no-repeat after:right-[-14px] after:top-[8px] after:w-2 after:h-2 after:absolute"><button x-on:click="open = ! open">Membership</button></h4>
-        <ul class="text-sm md:text-xs font-bold md:font-extrabold [&>li]:mb-2 hover:[&>li>a]:underline md:h-auto pl-5 md:pl-0 md:[&>li>a:after]:content-none [&>li>a:after]:content-[''] [&>li>a:after]:bg-[url('/arrow-right-white.svg')] [&>li>a:after]:bg-no-repeat [&>li>a:after]:right-[-14px] [&>li>a:after]:top-[5px] [&>li>a:after]:w-[9px] [&>li>a:after]:h-[9px] [&>li>a:after]:absolute" :class="open ? 'h-auto' : 'h-0 overflow-hidden'">
-          <li><a class="relative" href="#">Link 1</a></li>
-          <li><a class="relative" href="#">Link 2</a></li>
-          <li><a class="relative" href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div x-data="{ open: false }">
-        <h4 class="inline-flex mb-2 text-sm md:font-bold md:pointer-events-none relative md:after:content-none after:content-[''] after:bg-[url('/chevron-down-white.svg')] after:bg-no-repeat after:right-[-14px] after:top-[8px] after:w-2 after:h-2 after:absolute"><button x-on:click="open = ! open">Resources</button></h4>
-        <ul class="text-sm md:text-xs font-bold md:font-extrabold [&>li]:mb-2 hover:[&>li>a]:underline md:h-auto pl-5 md:pl-0 md:[&>li>a:after]:content-none [&>li>a:after]:content-[''] [&>li>a:after]:bg-[url('/arrow-right-white.svg')] [&>li>a:after]:bg-no-repeat [&>li>a:after]:right-[-14px] [&>li>a:after]:top-[5px] [&>li>a:after]:w-[9px] [&>li>a:after]:h-[9px] [&>li>a:after]:absolute" :class="open ? 'h-auto' : 'h-0 overflow-hidden'">
-          <li><a class="relative" href="#">Link 1</a></li>
-          <li><a class="relative" href="#">Link 2</a></li>
-          <li><a class="relative" href="#">Link 3</a></li>
-        </ul>
-      </div>
-      <div x-data="{ open: false }">
-        <h4 class="inline-flex mb-2 text-sm md:font-bold md:pointer-events-none relative md:after:content-none after:content-[''] after:bg-[url('/chevron-down-white.svg')] after:bg-no-repeat after:right-[-14px] after:top-[8px] after:w-2 after:h-2 after:absolute"><button x-on:click="open = ! open">Connect</button></h4>
-        <ul class="text-sm md:text-xs font-bold md:font-extrabold [&>li]:mb-2 hover:[&>li>a]:underline md:h-auto pl-5 md:pl-0 md:[&>li>a:after]:content-none [&>li>a:after]:content-[''] [&>li>a:after]:bg-[url('/arrow-right-white.svg')] [&>li>a:after]:bg-no-repeat [&>li>a:after]:right-[-14px] [&>li>a:after]:top-[5px] [&>li>a:after]:w-[9px] [&>li>a:after]:h-[9px] [&>li>a:after]:absolute" :class="open ? 'h-auto' : 'h-0 overflow-hidden'">
-          <li><a class="relative" class="relative " href="#">Link 1</a></li>
-          <li><a class="relative" href="#">Link 2</a></li>
-          <li><a class="relative" href="#">Link 3</a></li>
-        </ul>
-      </div>
-    </div>
+    {{ partial "footer-menu.html" . }}
   </div>
 
   <div class="container mx-auto">
-    <div class="flex flex-wrap">
-      <div class="flex w-full mb-8 text-sm lg:w-auto lg:mb-0">
-        <div class="mr-10">&copy; {{ now.Year }} The Carpentries</div>
-        <a class="hover:underline" href="/privacy/">Privacy Policy</a>
-      </div>
-      <div class="flex flex-wrap items-center lg:justify-end w-full lg:flex-1 gap-x-6 [&>a>img]:relative hover:[&>a>img]:bottom-[3px]">
-        <span class="w-full mb-3 font-extrabold lg:w-auto md:mb-0 md:font-sm">Follow Us</span>
-        <a aria-label="Slack" href="https://swc-slack-invite.herokuapp.com/"><img alt="Slack" src="/slack-logo.svg"></a>
-        <a aria-label="Twitter" href="https://twitter.com/thecarpentries"><img alt="Twitter" src="/twitter-logo.svg"></a>
-        <a aria-label="Facebook" href="https://www.facebook.com/carpentries/"><img alt="Facebook" src="/facebook-logo.svg"></a>
-        <a aria-label="YouTube" href="https://www.youtube.com/thecarpentries"><img alt="YouTube" src="/youtube-logo.svg"></a>
-        <a aria-label="LinkedIn" href="https://www.linkedin.com/company/the-carpentries/"><img alt="LinkedIn" src="/linkedin-logo.svg"></a>
-        <a aria-label="Github" href="https://github.com/carpentries"><img alt="Github" src="/github-logo.svg"></a>
-
-        <a class="px-4 py-2 mx-1 font-semibold border rounded-full text-offwhite hover:text-gray-dark hover:bg-offwhite border-offwhite" href="#">Donate</a>
-      </div>
-    </div>
+    {{ partial "footer-legal-social.html" . }}
   </div>
 </div>
