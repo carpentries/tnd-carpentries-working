@@ -11,7 +11,7 @@
       <div class="col-span-8 pb-16 pro">
         {{ range .Pages.ByTitle }}
           <div class="mb-4">
-            <h3 class="mb-2 text-2xl font-bold" id="#blog-{{ $.Data.Singular }}-{{ urlize .Title }}"><a class="hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <h3 class="mb-2 text-2xl font-bold" id="blog-{{ $.Data.Singular }}-{{ urlize .Title }}"><a class="hover:underline" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ with .Pages }}
             <div class="prose">
               <ul>
