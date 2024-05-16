@@ -1,4 +1,4 @@
-baseURL: https://example.org/
+baseURL: https://carpentries.netlify.app
 languageCode: en-us
 title: The Carpentries
 enableGitInfo: true
