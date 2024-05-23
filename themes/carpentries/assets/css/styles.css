@@ -170,3 +170,15 @@ ul.badges li:before{
   margin-left: auto;
   margin-right: auto;
 }
+
+.pagination {
+  @apply flex justify-center p-0 list-none;
+}
+
+.pagination li {
+  @apply px-1;
+}
+
+.pagination li.active {
+  @apply font-bold;
+}
