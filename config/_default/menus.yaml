@@ -174,12 +174,12 @@ main:
   weight: 30
 - identifier: community
   name: Community
-  url: "#"
+  url: "/community/"
   parent: volunteer
   weight: 10
 - identifier: get-involved
   name: Get Involved
-  url: "#"
+  url: "/community/get-involved"
   parent: volunteer
   weight: 20
 - identifier: handbook
