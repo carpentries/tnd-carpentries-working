@@ -79,13 +79,13 @@ community:
   pageRef: /community/
   weight: 10
 - name: Community Events
-  pageRef: /community/events/
+  pageRef: /community/events
   weight: 20
 - name: Get Connected
-  pageRef: /community/get-connected/
+  pageRef: /community/get-connected
   weight: 30
 - name: Get Involved
-  pageRef: /community/get-involved/
+  pageRef: /community/get-involved
   weight: 40
 # Main menu 
 main:
