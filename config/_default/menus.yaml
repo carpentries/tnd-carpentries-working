@@ -221,17 +221,17 @@ main:
   weight: 50
 - identifier: membership
   name: Membership
-  url: "#"
+  url: "/support/membership"
   parent: support
   weight: 10
 - identifier: sponsorship
   name: Sponsorship
-  url: "#"
+  url: "/support/sponsorship"
   parent: support
   weight: 20
 - identifier: donate
   name: Donate
-  url: "#"
+  url: "https://give.communityin.org/TheCarpentries?ref=ab_3YLLe3LMyx83YLLe3LMyx8"
   parent: support
   weight: 30
 # Communications menu
