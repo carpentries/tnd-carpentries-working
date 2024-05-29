@@ -73,6 +73,20 @@ host:
 - name: Pricing
   pageRef: host/pricing
   weight: 30
+# Community tabbed menu
+community:
+- name: Community
+  pageRef: /community/
+  weight: 10
+- name: Community Events
+  pageRef: /community/events
+  weight: 20
+- name: Get Connected
+  pageRef: /community/get-connected
+  weight: 30
+- name: Get Involved
+  pageRef: /community/get-involved
+  weight: 40
 # Main menu 
 main:
 # Main menu: About 
@@ -160,12 +174,12 @@ main:
   weight: 30
 - identifier: community
   name: Community
-  url: "#"
+  url: "/community/"
   parent: volunteer
   weight: 10
 - identifier: get-involved
   name: Get Involved
-  url: "#"
+  url: "/community/get-involved"
   parent: volunteer
   weight: 20
 - identifier: handbook
