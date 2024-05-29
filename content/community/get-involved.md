@@ -1,7 +1,9 @@
 ---
-title: Volunteer Opportunities
+title: Get Involved
 layout: single
 ---
+
+# Volunteer Opportunities
 
 ## Instructor 
 
