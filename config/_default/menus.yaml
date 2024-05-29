@@ -78,12 +78,15 @@ community:
 - name: Community
   pageRef: /community/
   weight: 10
-- name: Subcommunities
-  pageRef: /community/subcommunities/
+- name: Community Events
+  pageRef: /community/events/
   weight: 20
-- name: Committees and Task Forces
-  pageRef: /community/committees
+- name: Get Connected
+  pageRef: /community/get-connected/
   weight: 30
+- name: Get Involved
+  pageRef: /community/get-involved/
+  weight: 40
 # Main menu 
 main:
 # Main menu: About 
