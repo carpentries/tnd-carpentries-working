@@ -41,13 +41,16 @@ Note icons will be used for the workshop/IT counts
 
 ### Bronze Membership
 
-| 2 workshops | 
+- 2 workshops
+{.badges}
 
 Cake marzipan chocolate bar marzipan macaroon chocolate cake sweet roll. Muffin cupcake chocolate liquorice jujubes marzipan cupcake. Dragée cotton candy candy muffin macaroon. Cookie croissant muffin chocolate chocolate bar topping chocolate lemon drops. Jelly beans muffin sugar plum chocolate bar biscuit muffin. Dragée bear claw liquorice danish cupcake biscuit. Gingerbread soufflé lollipop marzipan sweet oat cake sesame snaps sugar plum. Ice cream oat cake halvah marzipan cake croissant oat cake tiramisu biscuit.
 
 ### Silver Membership
 
-| 2 workshops | 5 instructor training seats | 
+- 2 workshops
+- 5 instructor training seats
+{.badges} 
 
 Cake marzipan chocolate bar marzipan macaroon chocolate cake sweet roll. Muffin cupcake chocolate liquorice jujubes marzipan cupcake. Dragée cotton candy candy muffin macaroon. Cookie croissant muffin chocolate chocolate bar topping chocolate lemon drops. Jelly beans muffin sugar plum chocolate bar biscuit muffin. Dragée bear claw liquorice danish cupcake biscuit. Gingerbread soufflé lollipop marzipan sweet oat cake sesame snaps sugar plum. Ice cream oat cake halvah marzipan cake croissant oat cake tiramisu biscuit.
 
