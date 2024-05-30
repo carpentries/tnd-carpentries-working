@@ -5,13 +5,13 @@ blocks:
 - layout: select-cta
   options:
     - copy: Become a volunteer
-      url: #
+      url: /community/get-involved/
     - copy: Find a resource
-      url: #
+      url: https://docs.carpentries.org
     - copy: Get Involved
-      url: #
+      url: /community/get-involved/
     - copy: Host a workshop
-      url: #
+      url: /host/host-workshop/
 - layout: hero
   title: Teaching foundational coding and data science workshops to researchers worldwide since 1998.
   image: /images/hero-background.jpg
@@ -24,7 +24,7 @@ blocks:
     - And a **4th** stat
   cta:
     copy: Join our community
-    url: '#'
+    url: '/community/'
 - layout: 2-col-image-text
   image_alignment: right
   image_caption: This is an image caption
@@ -32,7 +32,7 @@ blocks:
   title: Our volunteer-led workshops are small, hands on, and interactive.
   cta:
     copy: Find a workshop
-    url: '#'
+    url: '/workshops/upcoming-workshops/"
 - layout: quote-slider
   slides:
     - quote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
