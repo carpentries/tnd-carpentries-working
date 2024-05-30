@@ -12,7 +12,7 @@ top:
   - name: Library Carpentry
     url: https://librarycarpentry.org/
     weight: 40
-# About page tabbed menu 
+# About page tabbed menu
 about:
 - name: About us
   pageRef: /about-us
@@ -87,9 +87,9 @@ community:
 - name: Get Involved
   pageRef: /community/get-involved
   weight: 40
-# Main menu 
+# Main menu
 main:
-# Main menu: About 
+# Main menu: About
 - identifier: about-us
   name: About us
   url: "/about-us/"
@@ -135,7 +135,7 @@ main:
   pageRef: "/about-us/contact-us/"
   parent: about-us
   weight: 90
-# Learn Menu 
+# Learn Menu
 - identifier: learn
   name: Learn
   url: "#"
@@ -259,4 +259,131 @@ main:
   name: Linkedin
   url: "https://www.linkedin.com/company/the-carpentries/"
   parent: communications
+  weight: 40
+footer:
+# Footer menu: Menu 1
+- identifier: about-us
+  name: About us
+  url: "/about-us/"
+  parent: null
+  weight: 10
+- identifier: link-1
+  name: Link 1
+  pageRef: "#"
+  parent: about-us
+  weight: 20
+- identifier: link-2
+  name: Link 2
+  pageRef: "#"
+  parent: about-us
+  weight: 30
+- identifier: link-3
+  name: Link 3
+  pageRef: "#"
+  parent: about-us
+  weight: 40
+# Footer menu: Menu 2
+- identifier: workshops
+  name: Workshops
+  url: "#"
+  parent: null
+  weight: 20
+- identifier: link-4
+  name: Link 1
+  pageRef: "#"
+  parent: workshops
+  weight: 20
+- identifier: link-5
+  name: Link 2
+  pageRef: "#"
+  parent: workshops
+  weight: 30
+- identifier: link-6
+  name: Link 3
+  pageRef: "#"
+  parent: workshops
+  weight: 40
+# Footer menu: Menu 3
+- identifier: volunteers
+  name: Volunteers
+  url: "#"
+  parent: null
+  weight: 30
+- identifier: link-7
+  name: Link 1
+  pageRef: "#"
+  parent: volunteers
+  weight: 20
+- identifier: link-8
+  name: Link 2
+  pageRef: "#"
+  parent: volunteers
+  weight: 30
+- identifier: link-9
+  name: Link 3
+  pageRef: "#"
+  parent: volunteers
+  weight: 40
+# Footer menu: Menu 4
+- identifier: membership
+  name: Membership
+  url: "#"
+  parent: null
+  weight: 40
+- identifier: link-10
+  name: Link 1
+  pageRef: "#"
+  parent: membership
+  weight: 20
+- identifier: link-11
+  name: Link 2
+  pageRef: "#"
+  parent: membership
+  weight: 30
+- identifier: link-12
+  name: Link 3
+  pageRef: "#"
+  parent: membership
+  weight: 40
+# Footer menu: Menu 5
+- identifier: resources
+  name: Resources
+  url: "#"
+  parent: null
+  weight: 50
+- identifier: link-13
+  name: Link 1
+  pageRef: "#"
+  parent: resources
+  weight: 20
+- identifier: link-14
+  name: Link 2
+  pageRef: "#"
+  parent: resources
+  weight: 30
+- identifier: link-15
+  name: Link 3
+  pageRef: "#"
+  parent: resources
+  weight: 40
+# Footer menu: Menu 6
+- identifier: connect
+  name: Connect
+  url: "#"
+  parent: null
+  weight: 60
+- identifier: link-16
+  name: Link 1
+  pageRef: "#"
+  parent: connect
+  weight: 20
+- identifier: link-17
+  name: Link 2
+  pageRef: "#"
+  parent: connect
+  weight: 30
+- identifier: link-18
+  name: Link 3
+  pageRef: "#"
+  parent: connect
   weight: 40
