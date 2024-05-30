@@ -55,7 +55,9 @@ blocks:
   copy: We are supported by our member organisations, those who sponsor workshops, as well as grants and donations from various sources.
   logos:
   - logo: moore-logo.svg
+    url: https://www.moore.org/
   - logo: alfred-sloan-logo.svg
+    url: https://sloan.org/
   - logo: chan-zuck-logo.svg
   - logo: r-studio-logo.svg
   cta:
