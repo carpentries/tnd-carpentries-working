@@ -397,3 +397,34 @@ footer:
   pageRef: "#"
   parent: connect
   weight: 40
+socials:
+- name: Slack
+  url: "https://swc-slack-invite.herokuapp.com/"
+  params:
+    img: "/slack-logo.svg"
+  weight: 10
+- name: Twitter
+  url: "https://twitter.com/thecarpentries"
+  params:
+    img: "/twitter-logo.svg"
+  weight: 20
+- name: Facebook
+  url: "https://www.facebook.com/carpentries"
+  params:
+    img: "/facebook-logo.svg"
+  weight: 30
+- name: Youtube
+  url: "https://www.youtube.com/thecarpentries"
+  params:
+    img: "/youtube-logo.svg"
+  weight: 40
+- name: LinkedIn
+  url: "https://www.linkedin.com/company/the-carpentries/"
+  params:
+    img: "/linkedin-logo.svg"
+  weight: 50
+- name: Github
+  url: "https://github.com/carpentries"
+  params:
+    img: "/github-logo.svg"
+  weight: 60
