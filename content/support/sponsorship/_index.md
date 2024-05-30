@@ -1,8 +1,6 @@
 ---
-title: Support The Carpentries
+title: The Carpentries Sponsorships
 layout: single
-cascade:
-  nav: support
 ---
 
 Support The Carpentries by being a member or a sponsor.  Information goes here.
