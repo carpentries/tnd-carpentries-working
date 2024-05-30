@@ -278,18 +278,18 @@ footer:
   parent: null
   weight: 10
 - identifier: link-1
-  name: Link 1
-  pageRef: "#"
+  name: Code of Conduct
+  pageRef: "https://docs.carpentries.org/topic_folders/policies/index_coc.html"
   parent: about-us
   weight: 20
 - identifier: link-2
-  name: Link 2
-  pageRef: "#"
+  name: Our History
+  pageRef: "/about-us/#our-history"
   parent: about-us
   weight: 30
 - identifier: link-3
-  name: Link 3
-  pageRef: "#"
+  name: Our Governance
+  pageRef: "/about-us/governance/"
   parent: about-us
   weight: 40
 # Footer menu: Menu 2
@@ -299,13 +299,13 @@ footer:
   parent: null
   weight: 20
 - identifier: link-4
-  name: Link 1
-  pageRef: "#"
+  name: Workshops FAQ
+  pageRef: "/workshops/workshops-faq/"
   parent: workshops
   weight: 20
 - identifier: link-5
-  name: Link 2
-  pageRef: "#"
+  name: Request a workshop
+  pageRef: "https://amy.carpentries.org/forms/workshop"
   parent: workshops
   weight: 30
 - identifier: link-6
