@@ -87,6 +87,16 @@ community:
 - name: Get Involved
   pageRef: /community/get-involved
   weight: 40
+# Membership tabbed menu
+membership:
+- name: Membership
+  pageRef: /support/membership
+  weight: 10
+- name: Membership FAQ
+  pageRef: /support/membership/membership-faq
+  weight: 20
+- name: Current Members
+  pageRef: /support/membership/member-list/
 # Main menu 
 main:
 # Main menu: About 
@@ -221,17 +231,17 @@ main:
   weight: 50
 - identifier: membership
   name: Membership
-  url: "#"
+  url: "/support/membership"
   parent: support
   weight: 10
 - identifier: sponsorship
   name: Sponsorship
-  url: "#"
+  url: "/support/sponsorship"
   parent: support
   weight: 20
 - identifier: donate
   name: Donate
-  url: "#"
+  url: "https://give.communityin.org/TheCarpentries?ref=ab_3YLLe3LMyx83YLLe3LMyx8"
   parent: support
   weight: 30
 # Communications menu
