@@ -1,4 +1,5 @@
 {{ $bcs := slice }}
+{{ $blogPage := site.GetPage "/posts/_index.md" }}
 {{ if not $.IsHome }}
   {{ $bcs = $bcs | append (dict
     "URL" site.Home.RelPermalink
@@ -12,5 +13,11 @@
       "Name" .Title
     ) }}
   {{ end }}
+{{ end }}
+{{ if eq .Kind "taxonomy" }}
+  {{ $bcs = $bcs | append (dict
+    "URL" $blogPage.RelPermalink
+    "Name" $blogPage.Title
+  ) }}
 {{ end }}
 {{ return $bcs }}

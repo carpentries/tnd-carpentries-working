@@ -6,15 +6,21 @@
         <p class="text-lg text-gray-mid">We are supported by our member organisations, those who sponsor workshops, as well as grants and donations from various sources.</p>
       </div>
 
-      {{ with .logos }}
-      <div class="grid max-w-6xl grid-cols-2 gap-10 mx-auto md:grid-cols-4">
-        {{ range . }}
-        <div class="flex items-center mx-auto">
-          <img src="{{ . }}">
+      <div class="max-w-6xl mx-auto">
+        <div class="flex flex-wrap -mx-2">
+          {{ range .logos }}
+          <div class="flex items-center justify-center w-1/2 px-2 mx-auto mb-5 md:w-1/4">
+            {{ with .url }}
+            <a href="{{ . }}">
+            {{ end }}
+              <img src="{{ .logo }}">
+            {{ with .url }}
+            </a>
+            {{ end }}
+          </div>
+          {{ end }}
         </div>
-        {{ end }}
       </div>
-      {{ end }}
 
       {{ with $cta := .cta }}
       {{ with .url }}

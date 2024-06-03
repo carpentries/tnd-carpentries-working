@@ -5,6 +5,8 @@
   @author @regisphilibert
 
   @context Example
+  ```json
+  {
     "github": "djinnome",
     "person_name": "Jeremy Zucker",
     "url": "https://linkedin.com/in/jeremyzucker",
@@ -20,7 +22,8 @@
     "is_mentee": false,
     "is_instructor": true,
     "gravatar": "71a6b29325a89b9b9643950bdc32a97c"
-
+  }
+  ```
   @access private
 
   @returns Map
@@ -29,7 +32,7 @@
     String (.term)
     String (.position)
     String (.pronouns)
-    Slice of Map (.urls)
+    []String (.urls)
       - String (.service)
         Resource (.icon)
         String (.url)
@@ -42,9 +45,12 @@
 {{ $s.Set "data" dict }}
 
 {{ $github_icon := resources.Get "/icons/github-square.svg" }}
-{{ $twitter_icon := resources.Get "/icons/twitter-square.svg" }}
+{{ $twitter_icon := resources.Get "/icons/x.svg" }}
 {{ $orcid_icon := resources.Get "/icons/orcid.svg" }}
 {{ $link_icon := resources.Get "/icons/link.svg" }}
+{{ $calendly_icon := resources.Get "/icons/calendly.svg" }}
+{{ $linkedin_icon := resources.Get "/icons/linkedin.svg" }}
+{{ $email_icon := resources.Get "/icons/email.svg" }}
 
 {{ with .person_name }}
   {{ $s.SetInMap "data" "name" . }}
@@ -86,7 +92,7 @@
 {{ with .email }}
 {{ $urls = $urls | append (dict
   "service" "email"
-  "icon" $link_icon
+  "icon" $email_icon
   "url" (printf "mailto:%s" .)
 )}}
 {{ end }}
@@ -102,7 +108,7 @@
 {{ with .linkedin }}
   {{ $urls = $urls | append (dict
     "service" "linkedin"
-    "icon" $link_icon
+    "icon" $linkedin_icon
     "url" (printf "https://www.linkedin.com/in/%s" .)
   )}}
 {{ end }}
@@ -134,7 +140,7 @@
 {{ with .calendly }}
   {{ $urls = $urls | append (dict
     "service" "calendly"
-    "icon" $link_icon
+    "icon" $calendly_icon
     "url" (printf "https://calendly.com/%s" .)
   )}}
 {{ end }}

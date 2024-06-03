@@ -4,7 +4,6 @@ import intersect from '@alpinejs/intersect'
 
 window.Alpine = Alpine
 
-
 Alpine.plugin(intersect)
 
 window.addEventListener('proseReady', (event) => {
@@ -71,4 +70,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
   } else {
     dispatchEvent(new Event('proseReady'))
   }
+})
+import Alpine from "alpinejs";
+
+window.Alpine = Alpine;
+window.addEventListener('DOMContentLoaded', (event) => {
+  Alpine.start();
 })

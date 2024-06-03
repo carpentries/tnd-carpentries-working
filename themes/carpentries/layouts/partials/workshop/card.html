@@ -1,46 +1,27 @@
 {{/*
-Available data (represented in yaml) and processed through `func/ParseWorkshop`
----
-url: https://peranti.github.io/2023-03-20-mtu-online/
-venue: Michigan Technological University
-start_date: 2023-20-24
-end_date: "2023-03-24
-string_date: Mar 20 - Mar 24 2023
-instructors:
-- Pradeep Eranti
-- Christian Ayala
-helpers:
-- Isaac Bigcraft
-- Zenia Sidorov
-- Vinay Palakurthy
-country:
-  key: de
-  name: Germany
-type:
-  key: software
-  name: Software Carpentry
-curriculum:
-  key: swc-reproducible-science
-  name: Software Carpentry (Shell, Git, Plotting and Programming in Python)
-meeting:
-  key: in-person
-  name: In Person
----
+  workshop/card
+  Print a list item for a Workshop
+
+  @author @regisphilibert
+
+  @context Map
+    see func/ParseWorkshop@return
+
 */}}
 <div class="p-8 mb-5 border"
-  data-country="{{ .country.name }}"
-  data-delivery="{{ .meeting.name | default "in-person" }}"
-  data-curriculum="{{ .curriculum.name }}"
+  {{- range $key, $value := .filters -}}
+    {{- printf `data-%s="%s"` $key $value | safeHTMLAttr -}}
+  {{- end -}}
 >
   <div class="flex mb-4 -mx-2">
     {{ with .type }}
-    <div class="flex items-center mr-4"> <img class="mx-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
+    <div class="flex items-center mx-2"> {{ with .image }}<img class="mx-1" src="{{ . }}" alt="">{{ end }} <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
     {{ with .country }}
-    <div class="flex items-center mr-4"> <img class="mx-1" width="20" height="20" class="mr-1" src="/flags/{{ .image }}.svg" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
+    <div class="flex items-center mx-2"> {{ with .image }}<img class="mx-1" width="20" height="20" class="mr-1" src="/flags/{{ . }}.svg" alt="">{{ end }} <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
     {{ with .meeting }}
-      <div class="flex items-center mr-4"> <img class="mx-1" src="{{ .image }}" alt=""> <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
+      <div class="flex items-center mx-2"> {{ with .image }}<img class="mx-1" src="{{ . }}" alt="">{{ end }} <span class="text-[0.625rem] uppercase">{{ .name }}</span></div>
     {{ end }}
   </div>
   {{ with $venue := .venue }}
