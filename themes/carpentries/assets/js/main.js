@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
       // Create a parent element for the current h2
       const parentElement = document.createElement('div');
       parentElement.classList.add('wrap')
-      parentElement.setAttribute('x-intersect.half', `currentSection = ${index}, currentSectionTitle = '${h2.innerText}'`)
+      parentElement.setAttribute('x-intersect.full', `currentSection = ${index}, currentSectionTitle = '${h2.innerText}'`)
 
       parentElement.style.paddingTop = '1px'
       parentElement.id = h2.getAttribute('id')
@@ -70,10 +70,4 @@ window.addEventListener('DOMContentLoaded', (event) => {
   } else {
     dispatchEvent(new Event('proseReady'))
   }
-})
-import Alpine from "alpinejs";
-
-window.Alpine = Alpine;
-window.addEventListener('DOMContentLoaded', (event) => {
-  Alpine.start();
 })
