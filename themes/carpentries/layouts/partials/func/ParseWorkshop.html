@@ -97,21 +97,21 @@
   {{ $tags = split . "," }}
   {{ $s.SetInMap "data" "tags" . }}
   {{/* Type is Software if... */}}
-  {{ if in $tags "swc" }}
+  {{ if in $tags "SWC" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "software"
       "name" "Software Carpentry"
       "image" "/software.svg"
     ) }}
   {{/* Type is Data if... */}}
-  {{ else if in $tags "dc" }}
+  {{ else if in $tags "DC" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "data"
       "name" "Data Carpentry"
       "image" "/data.svg"
     ) }}
   {{/* Type is Library if... */}}
-  {{ else if in $tags "lc" }}
+  {{ else if in $tags "LC" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "library"
       "name" "Library Carpentry"
