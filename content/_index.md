@@ -32,7 +32,7 @@ blocks:
   title: Our volunteer-led workshops are small, hands on, and interactive.
   cta:
     copy: Find a workshop
-    url: '/workshops/upcoming-workshops/"
+    url: '/workshops/upcoming-workshops/'
 - layout: quote-slider
   slides:
     - quote: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
