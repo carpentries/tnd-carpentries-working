@@ -38,6 +38,7 @@
       String (.country)
       String (.meeting)
       String (.curriculum)
+      String (.type)
     Map (.type)
       String (.key)
       String (.name)
@@ -188,6 +189,10 @@
   {{ with .curriculum }}
     {{ $s.SetInMap "filters" "curriculum" .name }}
   {{ end }}
+  {{ with .type }}
+    {{ $s.SetInMap "filters" "type" .name }}
+  {{ end }}
+
 {{ end }}
 {{ with $s.Get "filters" }}
   {{ $s.SetInMap "data" "filters" . }}
