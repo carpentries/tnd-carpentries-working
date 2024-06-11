@@ -110,7 +110,7 @@
       "image" "/data.svg"
     ) }}
   {{/* Type is Library if... */}}
-  {{ else if in $tags "lc" }}
+  {{ else if in $tags "LC" }}
     {{ $s.SetInMap "data" "type" (dict
       "key" "library"
       "name" "Library Carpentry"
@@ -187,6 +187,9 @@
   {{ end }}
   {{ with .curriculum }}
     {{ $s.SetInMap "filters" "curriculum" .name }}
+  {{ end }}
+  {{ with .type }}
+    {{ $s.SetInMap "filters" "type" .name }}
   {{ end }}
 {{ end }}
 {{ with $s.Get "filters" }}
