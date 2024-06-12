@@ -60,7 +60,7 @@
       {{ $output := slice }}
       {{/* If we find a comma, it means we have mutliple options
         and should split the string into an array */}}
-      {{ if in $value ", " }}
+      {{ if and (in $value ", ") (ne $key "curriculum") }}
         {{ $output = split $value ", " }}
       {{ else }}
         {{ $output = slice $value }}
