@@ -14,7 +14,12 @@
       </div>
       {{ end }}
     </div>
-    <div class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
+    <div
+      x-data="{
+        currentSection: 0,
+        currentSectionTitle: 'First'
+      }"
+    class="relative grid grid-cols-1 gap-8 md:grid-cols-12">
       <div class="pb-16 md:col-span-9 md:pr-20">
         <div class="prose h2-wrap max-w-none">
           {{ .Content }}
