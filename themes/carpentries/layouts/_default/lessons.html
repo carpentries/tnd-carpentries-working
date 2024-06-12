@@ -31,7 +31,7 @@
 
     )
   }}
-  {{ $filters := partialCached "func/GetFiltersFromEntries" $filtersArgs "LessonsFilters" }}
+  {{ $filtersData := partialCached "func/GetFiltersFromEntries" $filtersArgs "LessonsFilters" }}
   <div class="container px-5 mx-auto">
     {{ partial "breadcrumbs" . }}
     <h1 class="text-[2rem] leading-[2.8125rem] font-semibold mb-6">{{ .Title }}</h1>
@@ -48,7 +48,10 @@
       </div>
       <div class="relative md:col-span-4">
         <div class="sticky top-10">
-          {{ partial "filters" $filters }}
+          {{ partial "filters" (dict
+            "filters" $filtersData.filters
+            "placeholder" "Search lessons"
+          ) }}
           {{ .Render "sidebar" }}
         </div>
       </div>

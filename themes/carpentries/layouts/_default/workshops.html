@@ -8,7 +8,7 @@
 {{ end }}
 {{ define "main" }}
   {{ $entries := slice }}
-  {{ $filters := dict }}
+  {{ $filtersData := dict }}
 
   {{ with .Params.data_source }}
     {{ $entries = partialCached "func/GetWorkshops" . . }}
@@ -33,7 +33,7 @@
         )
       )
     }}
-    {{ $filters = partialCached "func/GetFiltersFromEntries" $filtersArgs "WorkshopFilters" }}
+    {{ $filtersData = partialCached "func/GetFiltersFromEntries" $filtersArgs "WorkshopFilters" }}
   {{ end }}
   <div class="container px-5 mx-auto">
     {{ partial "breadcrumbs" . }}
@@ -52,7 +52,10 @@
       </div>
       <div class="relative md:col-span-4">
         <div class="sticky top-10 sidebar">
-          {{ partial "filters" $filters }}
+          {{ partial "filters" (dict
+            "filters" $filtersData.filters
+            "placeholder" "Search workshops"
+            ) }}
           {{ .Render "sidebar" }}
         </div>
       </div>
