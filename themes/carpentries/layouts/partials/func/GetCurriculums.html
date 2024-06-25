@@ -15,9 +15,8 @@
      - func/GetFeed
      - func/ParseCurriculum
 */}}
-{{ $url := "https://feeds.carpentries.org/amy_curricula.json" }}
 {{ $entries := slice }}
-{{ with partial "func/GetFeed" $url }}
+{{ with partial "func/GetFeed" "curricula" }}
   {{ range . }}
     {{ $entries = $entries | append (partial "func/ParseCurriculum" .) }}
   {{ end }}

@@ -59,8 +59,8 @@
     {{ range $key, $value := . }}
       {{ $output := slice }}
       {{/* If we find a comma, it means we have mutliple options
-        and should split the string into an array */}}
-      {{ if in $value ", " }}
+        and should split the string into an array. Exception for the curriculum whose title might contain a comma */}}
+      {{ if (and (in $value ", ") (ne $key "curriculum")) }}
         {{ $output = split $value ", " }}
       {{ else }}
         {{ $output = slice $value }}
