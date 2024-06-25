@@ -33,7 +33,7 @@
         )
       )
     }}
-    {{ $filtersData = partialCached "func/GetFiltersFromEntries" $filtersArgs "WorkshopFilters" }}
+    {{ $filtersData = partial "func/GetFiltersFromEntries" $filtersArgs }}
   {{ end }}
   <div class="container px-5 mx-auto">
     {{ partial "breadcrumbs" . }}
