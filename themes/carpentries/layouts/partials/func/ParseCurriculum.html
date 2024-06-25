@@ -27,10 +27,7 @@
 {{ with .name }}
   {{ $s.SetInMap "data" "name" . }}
 {{ end }}
-{{ with .slug }}
+{{ with .id }}
   {{ $s.SetInMap "data" "key" . }}
-{{ end }}
-{{ with .description }}
-  {{ $s.SetInMap "data" "description" . }}
 {{ end }}
 {{ return $s.Get "data" }}
