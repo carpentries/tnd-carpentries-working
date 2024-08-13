@@ -13,7 +13,7 @@ blocks:
     - copy: Host a workshop
       url: /host/host-workshop/
 - layout: hero
-  title: Teaching foundational coding and data science workshops to researchers worldwide since 1998.
+  title: This site was used to test the new Carpentries theme and is now deprecated.
   image: /images/hero-background.jpg
 - layout: stats
   title: Our diverse and global community is comprised of
